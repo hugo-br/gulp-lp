@@ -1,0 +1,302 @@
+include ../../mixins/mixins.pug
+- var category = 'Sale'
+
+
+doctype html
+html(lang='en')
+	head
+		title Landing Page
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+		meta(content='True', name='HandheldFriendly')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=5')
+		meta(name='nosnippets')
+		meta(name='theme-color', content='#85031b')
+		meta(name='description', content='Landing Page')
+		|
+		|
+		|
+		|            
+		// !!! DO NOT INCLUDE IN BCC !!!
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js')
+		|
+		|          
+		// !!! DO NOT INCLUDE IN BCC !!!
+		|
+		|
+		|        
+		script.
+			// Picture element HTML5 shiv
+			document.createElement("picture");
+		|
+		|   
+		|         
+		script(src='https://static.lechateau.com/html/landing/templates/new/picturefill.min.js', async='')
+		|
+		|
+		|        
+		style.
+			/* for fullpage on landing page 
+			.listing .wrapper:not(.top) {
+			padding: 0px!important;
+			}
+			.sub-header-black {
+			display: none;
+			}
+			#content>div.wrapper {
+			width: 100%;
+			max-width: 2000px;
+			}
+			#content>.wrapper>.sidebar {
+			display: none;
+			}
+			#content.landing .top .breadcrumbs, #content.listing .top .breadcrumbs {
+			display: none;
+			}
+			@media (max-width: 767px) {
+			.categoryBanner, #catBanner {
+			display: block;
+			}
+			}
+			*/
+			/* Break points */
+			@media (min-width: 769px) {
+			.LP-DESKTOP {
+			display: block;
+			}
+			.LP-DEVICE {
+			display: none;
+			}
+			}
+			@media (max-width: 768px) {
+			.LP-DEVICE {
+			display: block;
+			}
+			.LP-DESKTOP {
+			display: none;
+			}
+			}
+			/* END Break points */
+			.row,
+			#landingPage {
+			max-width: 2000px;
+			margin: auto;
+			}
+			.row {
+			position: relative;
+			overflow: hidden;
+			width: 90%;
+			margin: auto;
+			max-width: 1300px;
+			text-align: center;
+			}
+			.row.hero {
+			max-width: 2000px;
+			}
+			.row .image-bckg {
+			display: block;
+			margin: auto;
+			box-sizing: border-box;
+			position: relative;
+			margin-top: 0px;
+			width: 100%;
+			}
+			.row .image-bckg img {
+			display: block;
+			margin: auto;
+			}
+			.row .text-wrap {
+			text-align: center;
+			}
+			.row .text-over {
+			display: block;
+			width: 100%;
+			max-width: 591px;
+			position: relative;
+			}
+			.row .ctas > a {
+			z-index: 4;
+			}
+			.row .half {
+			width: 100%;
+			display: block;
+			}
+			/*   MARGINS   */
+			@media (min-width: 769px) {
+			.row {
+			margin-top: 20px;
+			}
+			}
+			@media (max-width: 1300px) and (min-width: 769px) {
+			.row {
+			/*     margin-top: calc( (40 / 1300) * 100% ); */
+			}
+			}
+			@media (max-width: 768px) {
+			.row,
+			.row .half:nth-child(2) {
+			margin-top: 20px;
+			/*	margin-top: calc((40/591) * 100%); */
+			}
+			}
+			@media (max-width: 591px) {
+			.row,
+			.row .half:nth-child(2) {
+			margin-top: 40px;
+			margin-top: calc((40/591) * 100%);
+			}
+			}
+			/* First Row */
+			.row.row1 {
+			margin-top: 0px;
+			}
+			@media (min-width: 1024px) {
+			.show-desk {
+			display: block;
+			}
+			.show-tab {
+			display: none !important;
+			}
+			}
+			@media (max-width: 1024px) {
+			.show-desk {
+			display: none !important;
+			}
+			.show-tab {
+			display: block;
+			}
+			}
+			.lazyload,
+			.lazyloading {
+			min-height: 100vh;
+			}
+		|
+		|        
+		|  
+		//-DRAGBALLS - CSS
+		include ../../style/dragballs
+		script(src='https://static.lechateau.com/html/landing/templates/new/dragscroll-min.js', async='')        
+		|
+		//-SEO - CSS
+		include ../../style/seo   
+		|    
+		//-INSTAGRAM HOMEPAGE - CSS
+		//-include ../../style/instagram
+		|
+		//-YOUTUBE - CSS
+		//-include ../../style/youtube
+		| 
+		//-SHOP THE LOOK - CSS
+		//-include ../../style/shoplook
+		|        
+		script(src='https://static.lechateau.com/html/landing/templates/new/lazyload.min.js', async='')
+		|
+		|
+		//- CAROUSEL(3 files)
+		//-link(rel='stylesheet', type='text/css', href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+		//-script(type='text/javascript', src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+		//-include ../../style/sliderSlick        
+	|
+	|
+	body
+		|
+		|    
+		noscript#deferred-styles
+			// !!! DO NOT INCLUDE IN BCC !!!
+			link(rel='stylesheet', type='text/css', href='https://static.lechateau.com/static/css/combined.min.css?bust=4c6557c')
+			link(rel='stylesheet', type='text/css', href='https://static.lechateau.com/html/landing/templates/new/MyFontsWebfontsKit.min.css')
+			|
+			|           
+			// !!! DO NOT INCLUDE IN BCC !!!
+			include ../../style/LP-css-link
+			|
+			|
+		|
+		|
+		|
+		|
+		#landingPage(style="max-width:815px;")
+			|
+			|
+			|         
+			//-DRAGBALLS files(dragballs/): home, outlet, sale (eng or fr)
+			include ../../dragballs/sale/fr
+            
+			//-CONTENT file, update in folder /content
+			.sectionLp(data-section="allsale")
+				include ../../content/sale/fr
+            
+			//- SEO files(seo/): wedding, men, women, shoes, dress, suit, sale, outlet, clearance (eng or fr)
+			include ../../seo/sale/fr
+			|
+			|
+			|             
+		|
+		|
+		|
+		|
+		script.
+			// defer css
+			var loadDeferredStyles = function() {
+			var addStylesNode = document.getElementById("deferred-styles");
+			var replacement = document.createElement("div");
+			replacement.innerHTML = addStylesNode.textContent;
+			document.body.appendChild(replacement)
+			addStylesNode.parentElement.removeChild(addStylesNode);
+			};
+			var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+			window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+			else window.addEventListener('load', loadDeferredStyles);
+			// Polyfill for responsive images
+			function loadJS(u){var r = document.getElementsByTagName( "script" )[ 0 ], s = document.createElement( "script" );s.src = u;r.parentNode.insertBefore( s, r );}
+			if(!window.HTMLPictureElement){
+			document.createElement('picture');
+			loadJS("https://static.lechateau.com/html/landing/templates/new/respimage.min.js");
+			}
+			function checkDevice() {
+			var isiPad = function() {
+			return (navigator.platform.indexOf("iPad") != -1);
+			}
+			var isiPhone = function() {
+			return (
+			//Detect iPhone
+			(navigator.platform.indexOf("iPhone") != -1) ||
+			//Detect iPod
+			(navigator.platform.indexOf("iPod") != -1)
+			);
+			}
+			if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i) || isiPad() || isiPhone()) {
+			return true;
+			}
+			return false;
+			}
+			$(document).ready(function(e) {
+			// check if device
+			try {
+			var checkDev = checkDevice();
+			if (checkDev == true) {
+			$("#mob-silder-wrap").show();
+			}
+			} catch (err) {}
+			$(".dragscroll .slide").click(function() {
+			var n = $(this).data("link");
+			dataLayer.push({
+			"event": "dragballs",
+			"eventAction": n, // name
+			"eventLabel": '#{category}' // CHANGE PAGE HERE
+			});
+			});
+			});
+		|
+		|
+        
+        
+		//- SEO SCRIPTS (seo, seo-fr)
+		include ../../js/seo-fr
+		//-OUTLET AND SALE LP SCRIPTS
+		include ../../js/outlet    
+		//-SLIDER
+		//-include ../../js/slider         
+		|
+		| 

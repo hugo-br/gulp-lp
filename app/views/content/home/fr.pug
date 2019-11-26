@@ -1,0 +1,388 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+|
+|
+|
+|
+style.
+    /* HERO CSS */
+    @media (min-width: 1300px) {
+    #landingPage > div.row.hero.party > div.ctas.LP-DESKTOP > a
+    {
+    position: relative;
+    }
+    #landingPage > div.row.hero.party > div.ctas.LP-DESKTOP
+    {
+    height: 0px;
+    }
+    #landingPage > div.row.hero.party > div.ctas.LP-DESKTOP > a {
+    top: 553px;
+    left:-615px;
+    }	
+    }
+    @media (max-width: 1300px) and (min-width: 769px) {
+    #landingPage > div.row.hero.party > div.ctas.LP-DESKTOP > a
+    {
+    position: absolute;
+    }
+    #landingPage > div.row.hero.party > div.ctas.LP-DESKTOP > a {
+    left: 12%;
+    top: 83%;
+    }
+    }
+    @media (max-width: 768px) {
+    .row.margin-0 {
+    margin-top: 60px;
+    margin-top: calc((40/591) * 100%);
+    }
+    }
+
+
+
+
+//-START ----------------------
+// ROW - PRE-BF SALE
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('50% de rabais sur les robes', 
+		 'https://www.lechateau.com/style/jump/50%25+Off+Dresses+/category/cat260081', 
+		 "Magasinez les robes")(class="btn-lc regular margin-0", style="left:13%; bottom: 5%;")
+    +cta('50% de rabais sur les chaussures', 
+		 'https://www.lechateau.com/style/jump/50%25+Off+All+Shoes+%26+Boots/category/cat260038', 
+		 "Magasinez les chaussures")(class="btn-lc regular margin-0", style="left:38%; bottom: 5%;")
+    +cta('Magasinez tous les articles en solde', 
+		 'https://www.lechateau.com/style/jump/SALE/category/cat260028', 
+		 "Magasinez les soldes")(class="btn-lc regular margin-0", style="left:67%; bottom: 5%;")          
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/SALE/category/cat260028', 
+		  "Magasinez les soldes",
+		  "Solde pr&eacute;-vendredi fou",
+		  'prebf-dressesshoes-251119-fr-d', 
+		  'prebf-dresses-251119-m-fr',
+		  false)
+  .image-map.LP-DEVICE
+    +map('https://www.lechateau.com/style/jump/50%25+Off+Dresses+/category/cat260081', 'Magasinez les robes')(style="height:65%; top:0; left:0; position:absolute; width:100%;")
+    +map('https://www.lechateau.com/style/jump/50%25+Off+All+Shoes+%26+Boots/category/cat260038', 'Magasinez les chaussures')(style="height:18%; top:64%; left:0; position:absolute; width:100%;")
+    +map('https://www.lechateau.com/style/jump/SALE/category/cat260028', 'Magasinez les soldes')(style="height:20%; top:80%; left:0; position:absolute; width:100%;")
+// END - PRE-BF SALE
+//-END--------------------
+
+
+  
+
+  
+//-START ----------------------
+// ROW - HERO PARTY
+.row.hero.party
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Magasinez les nouveautés', 
+		 "https://www.lechateau.com/style/jump/New+Arrivals/category/catwfr10020", 
+		 "Magasinez les nouveautés pour femmes")(class="btn-lc secondary margin-00")
+		 
+  // image
+  +hero("https://www.lechateau.com/style/jump/New+Arrivals/category/catwfr10020", 
+		  "Magasinez les nouveautés pour femmes",
+		  "Jour de fête. Sortez en beauté et arborez un look impec jusqu’aux petites heures du matin. Magasinez les nouveautés",
+      'lechateau-08-11-19-fr-d_01',
+		  'lechateau-08-11-19-fr-d_01-1300',
+		  'lechateau-08-11-19-fr-m_01',
+		  false)
+// END - ROW
+//-END--------------------
+
+//-START ----------------------
+// ROW - SIZE
+.row.margin-00
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/New+Arrivals/category/catwfr10020', 
+		  "",
+		  "",
+		  'lechateau-08-11-19-fr-d_03', 
+		  'lechateau-08-11-19-fr-m_02',
+		  false)
+// END - ROW - SIZE
+//-END--------------------
+
+		  
+		  
+//-START ----------------------
+// ROW - DRESSES
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Magasinez les robes', 
+		 'https://www.lechateau.com/style/jump/Dresses/category/cat37630709', 
+		 "Magasinez les robes")(class="btn-lc regular margin-0", style="left:5%; bottom: 0%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Dresses/category/cat37630709', 
+		  "Magasinez les robes ",
+		  "Robes pour briller. Affichez votre sens du style irréprochable. Magasinez les robes",
+		  'lechateau-08-11-19-fr-d_06', 
+		  'lechateau-08-11-19-fr-m_03',
+		  false)
+// END - ROW DRESSES
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - DRESSES
+.row
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Metallic+Knit+Wrap-Like+Dress/productDetail/All+Women/376726/cat37630709', 
+		  "",
+		  "",
+		  'lechateau-08-11-19-fr-d_09', 
+		  'lechateau-08-11-19-fr-m_05')
+  .image-map.LP-DESKTOP
+    +map('https://www.lechateau.com/style/jump/Metallic+Knit+Wrap-Like+Dress/productDetail/All+Women/376726/cat37630709','Achetez la robe cache-coeur métallisée')(style="top: 0; left:0; height:100%; width: 25%; position: absolute;")
+    +map('https://www.lechateau.com/style/jump/Floral+Knit+Cr%C3%AApe+Off-the-Shoulder+Dress/productDetail/Dresses/378026/cat37630709','Achetez la robe à épaules dénudées')(style="top: 0; left:25%; height:100%; width: 25%; position: absolute;")
+    +map('https://www.lechateau.com/style/jump/Knit+Cowl+Neck+Cocktail+Dress/productDetail/Dresses/377582/cat37630733','Achetez la petite robe noire')(style="top: 0; left:50%; height:100%; width: 25%; position: absolute;") 
+    +map('https://www.lechateau.com/style/jump/Velvet+Wrap-Like+Dress/productDetail/Dresses/376992/cat37630709','Achetez la robe cache-coeur en velours ')(style="top: 0; left:75%; height:100%; width: 25%; position: absolute;")
+  .image-map.LP-DEVICE
+    +map('https://www.lechateau.com/style/jump/Floral+Knit+Cr%C3%AApe+Off-the-Shoulder+Dress/productDetail/Dresses/378026/cat37630709','Achetez la robe à épaules dénudées')(style="top: 0; left:0%; height:100%; width: 50%; position: absolute;")
+    +map('https://www.lechateau.com/style/jump/Knit+Cowl+Neck+Cocktail+Dress/productDetail/Dresses/377582/cat37630733','Achetez la petite robe noire')(style="top: 0; left:50%; height:100%; width: 50%; position: absolute;")     
+// END - ROW - DRESSES
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - TOPS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Magasinez les hauts', 
+		 'https://www.lechateau.com/style/jump/Tops/category/catwfr10025', 
+		 "Magasinez les hauts pour femmes")(class="btn-lc regular margin-40", style="left:52%; top: 86%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Tops/category/catwfr10025', 
+		  "Magasinez les hauts pour femmes",
+		  "Hauts remarquables. À la fois élégants et stylés, ces hauts sont conçus pour un effet wow. Magasinez les hauts",
+		  'lechateau-08-11-19-fr-d_15', 
+		  'lechateau-08-11-19-fr-m_07')
+// END - ROW TOPS
+//-END--------------------
+|
+|
+|
+|
+|
+|
+//-START ----------------------
+// ROW - SHOES 
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Magasinez maintenant', 
+		 'https://www.lechateau.com/style/jump/Holiday+%26+Party/category/cat39170936', 
+		 "Magasinez les chaussures de fête et party pour femmes")(class="btn-lc regular margin-40", style="left:65%; top: 84%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Holiday+%26+Party/category/cat39170936', 
+		  "Magasinez les chaussures de fête et party pour femmes",
+		  "Chaussures festives. Rehaussez votre look d’un cran avec ces styles fabuleux. Magasinez maintenant ",
+		  'lechateau-08-11-19-fr-d_21', 
+		  'lechateau-08-11-19-fr-m_09')
+// END - SHOES
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - SHOES ITEMS
+.row
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Metallic+Knit+Wrap-Like+Dress/productDetail/All+Women/376726/cat37630709', 
+		  "",
+		  "",
+		  'lechateau-08-11-19-fr-d_24', 
+		  'lechateau-08-11-19-fr-m_11')
+  .image-map.LP-DESKTOP
+    +map('https://www.lechateau.com/style/jump/Faux+Suede+Pointy+Toe+Pump/productDetail/Pumps/376842/catsfr51002',"Achetez l'escarpin à bout pointu")(style="top: 0; left:0; height:100%; width: 25%; position: absolute;")
+    +map('https://www.lechateau.com/style/jump/Faux+Suede+Ankle+Boot/productDetail/All+Shoes+%26+Boots/375483/cat45250704','Achetez la botte au genou extensible')(style="top: 0; left:25%; height:100%; width: 25%; position: absolute;")
+    +map('https://www.lechateau.com/style/jump/Faux+Suede+Pointy+Toe+Knee-High+Boot/productDetail/Combat+%26+Lace-up+Boots/375069/cat45870755','Achetez la botte au  genou lacée')(style="top: 0; left:50%; height:100%; width: 25%; position: absolute;") 
+    +map('https://www.lechateau.com/style/jump/Stretch+Faux+Leather+Knee-High+Boot/productDetail/Stretch+Boots+/376261/cat45870755','Achetez la botte chelsea')(style="top: 0; left:75%; height:100%; width: 25%; position: absolute;")
+  .image-map.LP-DEVICE
+    +map('https://www.lechateau.com/style/jump/Faux+Suede+Ankle+Boot/productDetail/All+Shoes+%26+Boots/375483/cat45250704','Achetez la botte au genou extensible')(style="top: 0; left:0%; height:100%; width: 50%; position: absolute;")
+    +map('https://www.lechateau.com/style/jump/Faux+Suede+Pointy+Toe+Pump/productDetail/Pumps/376842/catsfr51002',"Achetez l'escarpin à bout pointu")(style="top: 0; left:50%; height:100%; width: 50%; position: absolute;")     
+// END - TOPS ITEMS
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - PLUS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Tailles plus', 
+		 'https://www.lechateau.com/style/jump/Plus+Size/category/cat44810713', 
+		 "Magasinez les tailles plus")(class="btn-lc regular margin-40", style="left:36%; top: 88%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Plus+Size/category/cat44810713', 
+		  "Magasinez les tailles plus",
+		  "Plus de styles, plus de tailles. Des styles à couper le souffle offerts jusqu’en tailles 3X et 22W en ligne et dans les magasins sélectionnés. Tailles plus",
+		  'lechateau-08-11-19-fr-d_30', 
+		  'lechateau-08-11-19-fr-m_13')
+// END - PLUS
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - COATS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Magasinez les manteaux', 
+		 'https://www.lechateau.com/style/jump/Coats+%26+Jackets/category/catwfr10031', 
+		 "Magasinez les blousons et manteaux pour femmes")(class="btn-lc regular margin-40", style="right:11%; top: 88%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Coats+%26+Jackets/category/catwfr10031', 
+		  "Magasinez les blousons et manteaux pour femmes",
+		  "Manteaux incontournables. Peu importe les caprices de la météo, restez au chaud avec ces essentiels d’hiver. Magasinez les manteaux",
+		  'lechateau-08-11-19-fr-d_36', 
+		  'lechateau-08-11-19-fr-m_15')
+// END - COATS
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - SWEATERS/BOOTS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Magasinez les chandails', 
+		 'https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/cat43770731', 
+		 "Magasinez les chandails et cardigans pour femmes")(class="btn-lc regular margin-0", style="left:1%; bottom: 0;")
+    +cta('Magasinez les bottes ', 
+		 'https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		 "Magasinez les bottes pour femmes")(class="btn-lc regular margin-0", style="left:51%; bottom: 0;")    
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/cat43770731', 
+		  "Magasinez les chandails et cardigans pour femmes",
+		  "Chandails confos-chics. Parfaits pour tous les jours de la semaine. Magasinez les chandails",
+		  'lechateau-08-11-19-fr-d_42', 
+		  'lechateau-08-11-19-fr-m_17')
+  .image-map.LP-DESKTOP
+    +map('https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/cat43770731',"Magasinez les chandails et cardigans pour femmes")(style=" width:50%; height: 100%; left:0; top:0; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704',"Magasinez les bottes pour femmes")(style=" width:50%; height: 100%; left:50%; top:0; position:absolute;")    
+// END - COATS
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - MOBILE BOOTS
+.row.LP-DEVICE
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		  "Magasinez les bottes pour femmes",
+		  "Bottes de saison. Conçues pour vous assurer chaleur et confort. Magasinez les bottes ",
+		  'lechateau-08-11-19-fr-m_19', 
+		  'lechateau-08-11-19-fr-m_19')
+// END - ROW
+//-END--------------------
+|
+|
+|
+|
+|
+|
+//-START ----------------------
+// ROW - MEN
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Vêtements pour hommes', 
+		 'https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
+		 "Magasinez les vêtements pour hommes")(class="btn-lc secondary margin-40", style="left:53%; top: 77%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
+		  "Magasinez les vêtements pour hommes",
+		  "Manteaux matelassés. Voici le parfait manteau garni de duvet. Offert en trois couleurs. L’article le plus cool de votre tenue sera également le plus chaud. Vêtements pour hommes",
+		  'lechateau-08-11-19-fr-d_48', 
+		  'lechateau-08-11-19-fr-m_21')
+// END - MEN
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW -  WEDDING
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('La Boutique mariage', 
+		 'https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
+		 "Explorez la Boutique mariage")(class="btn-lc secondary margin-40", style="left:13.5%; top: 59%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
+		  "Explorez la Boutique mariage",
+		  "RSVP avec style. Pour toutes vos invitations de la saison, tournez-vous vers les looks les plus convoités. La Boutique mariage",
+		  'lechateau-08-11-19-fr-d_54', 
+		  'lechateau-08-11-19-fr-m_23')
+// END - WEDDING
+//-END--------------------
+|
+|
+|
+
+//-START ----------------------
+// ROW - APPOINTMENT
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('EN SAVOIR PLUS', 
+		 'https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 
+		 'Fixez un rendez-vous de stylisme personnel')(class="btn-lc regular margin-00", style="right:61.5%; top: 89%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 
+		  'Fixez un rendez-vous de stylisme personnel', 
+		  "Voici Votre mode de vie stylée Service de stylisme personnel. Fixez un rendez-vous en magasin avec nos stylistes LE CHÂTEAU.  - Expérience personnalisée  - Jusqu'à 60 minutes de service de stylisme et de conseils mode  - Tenues créées en fonction de votre style personnel ou de l'événement à venir - Salle d'essayage réservée  + recevez un cadeau spécial  *Quantités limitées. En savoir plus>", 
+		  'styling-service-banner-190920-fr-d', 
+		  'styling-service-banner-190920-fr-m')
+// END - ROW APPOINTMENT
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - OUTLET BOTTOM
+.row.LP-DESKTOP
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/SALE/category/cat260028', 
+		  'Magasinez les soldes', 
+		  'Magasinez les soldes', 
+		  'salebanner-191016-fr-d-v2', 
+		  'salebanner-191016-fr-d-v2')
+		 
+  // image-map
+  .image-map
+    +map('https://www.lechateau.com/style/jump/SALE/category/cat260028', 'Magasinez les soldes')(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/OUTLET/category/cat37310715', "Magasinez les soldes de l'entrepôt")(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/CLEARANCE/category/cat45930750', 'Magasinez les soldes de liquidation')(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+// END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+//- INSTAGRAM (img,link)
+-var insta = [['instagram-190925-01','https://www.lechateau.com/style/jump/INSTAG376021_063/productDetail/Social+Looks/INSTAG376021_063/cat46700705'],['instagram-190925-02','https://www.lechateau.com/style/jump/INSTAG376589_209/productDetail/Social+Looks/INSTAG376589_209/cat46700705'],['instagram-190925-03','https://www.lechateau.com/style/jump/INSTAG370115_053/productDetail/Social+Looks/INSTAG370115_053/cat46700705'],['instagram-190925-05','https://www.lechateau.com/style/jump/INSTAG375984_446/productDetail/Social+Looks/INSTAG375984_446/cat46700705']]
++instagram(insta, 'fr')
+//-END--------------------
+
+
++legal("*Styles sélectionnés.")

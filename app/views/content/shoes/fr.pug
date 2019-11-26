@@ -1,0 +1,306 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
+
+style.
+    /* HERO CSS */
+    @media (min-width: 1300px) {
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP > a
+    {
+    position: relative;
+    }
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP
+    {
+    height: 0px;
+    }
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP > a {
+    top: 528px;
+    left: -452px;
+    }	
+    }
+    @media (max-width: 1300px) and (min-width: 769px) {
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP > a
+    {
+    position: absolute;
+    }
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP > a {
+    left: 7%;
+    top: 72%;
+    }
+    }
+    @media (max-width: 768px) {
+    .row.margin-0 {
+    margin-top: 60px;
+    margin-top: calc((40/591) * 100%);
+    }
+    }
+
+//-START ----------------------
+// ROW - HERO
+.row.hero.row1.shoes
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Nouvelles bottes', 
+		 'https://www.lechateau.com/style/jump/New+Arrivals/category/cat400161', 
+		 "Magasinez les nouvelles chaussures pour femmes")(class="btn-lc secondary margin-00", style="")
+  // image
+  +hero('https://www.lechateau.com/style/jump/New+Arrivals/category/cat400161', 
+		  "Shop New Women's Boots",
+		  "On passe aux bottes. Sortez de l’ordinaire avec une botte au genou ultra-tendance ou adoptez le look confo-chic avec un bottillon décontracté. Découvrez les styles incontournables de la saison. Magasinez les nouvelles bottes",
+		  'shoes-191101-fr-d_01_2000',
+		  'shoes-191101-fr-d_01',
+		  'shoes-191101-fr-m_01',
+		  false)
+// END - 
+//- END - ROW - HERO
+//-END--------------------
+
+
+// ROW - PROMO SHOES
+.row
+  // CTAs
+  .ctas.LP-DESKTOP
+    a.btn-lc.regular.margin-00(href='https://www.lechateau.com/style/jump/Extra+%2425+Off+Tops+%26+Bottoms/category/cat47100725', target='_top', title='Magasinez les hauts, jupes et pantalons en solde', style='left:27%; top: 80%;') HAUTS, JUPES ET PANTALONS
+    a.btn-lc.regular.margin-00(href='https://www.lechateau.com/style/jump/All+Shoes+%26+Boots/category/cat260038', target='_top', title='Magasinez les bottes et chaussures en solde', style='left:53%; top: 80%;') BOTTES ET CHAUSSURES
+  // @end CTAs
+  // BACKGROUND IMAGE
+  .image-bckg
+    a(href='https://www.lechateau.com/style/jump/SOLDE/category/cat260028', title='Magasinez les soldes')
+      picture
+        //if IE 9
+          audio
+        // Mobile
+        source(media='(max-width: 768px)', srcset='https://lechateau.scene7.com/is/image/LeChateau/homepagebanner-promo-311019-fr-m?$jpeg-prog$&cache=off')
+        // Desktop
+        source(media='(min-width: 768px)', srcset='https://lechateau.scene7.com/is/image/LeChateau/homepagebanner-promo-311019-fr-d?$jpeg-prog$&cache=off')
+        //if IE 9
+        img(src='https://lechateau.scene7.com/is/image/LeChateau/homepagebanner-promo-311019-fr-m?$jpeg-prog$&cache=off', alt='Magasinez les soldes', decoding='async')
+  // @end BACKGROUND
+  .image-map.LP-DESKTOP
+    a(href='https://www.lechateau.com/style/jump/Extra+%2425+Off+Tops+%26+Bottoms/category/cat47100725', title='Magasinez les hauts, jupes et pantalons en solde', style='position:absolute; left: 0; top: 0; width: 50%; height:100%;')  
+    a(href='https://www.lechateau.com/style/jump/All+Shoes+%26+Boots/category/cat260038', title='Magasinez les bottes et chaussures en solde', style='position:absolute; left: 50%; top: 0; width: 50%; height:100%;')  
+  .image-map.LP-DEVICE
+    a(href='https://www.lechateau.com/style/jump/Extra+%2425+Off+Tops+%26+Bottoms/category/cat47100725', title='Magasinez les hauts, jupes et pantalons en solde', style='position:absolute; left: 0; top: 0%; width: 100%; height:80%;')  
+    a(href='https://www.lechateau.com/style/jump/All+Shoes+%26+Boots/category/cat260038', title='Magasinez les bottes et chaussures en solde', style='position:absolute; left: 0%; top: 80%; width: 100%; height:20%;')
+// ROW END - PROMO SHOES
+
+
+//-START ----------------------
+// ROW - ALL BOOTS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Magasinez les bottes', 
+		 'https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		 "Magasinez les bottes pour femmes")(class="btn-lc regular margin-40", style="left:40%; top: 40%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		  "Magasinez les bottes pour femmes",
+		  "Votre mode confort. Jumeler style et confort, c’est possible! Ces bottes branchées vous offrent le meilleur des deux mondes. Magasinez les bottes",
+		  'shoes-191101-fr-d_03', 
+		  'shoes-191101-fr-m_03',
+		  false)
+// END - ALL BOOTS
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - NIGHT OUT
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Mode sortie en soirée', 
+		 'https://www.lechateau.com/style/jump/Night+Out/category/cat39170936', 
+		 "Magasinez les chaussures pour sortie en soirée pour femmes")(class="btn-lc regular margin-40", style="left:72%; top: 50%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Night+Out/category/cat39170936', 
+		  "Magasinez les chaussures pour sortie en soirée pour femmes",
+		  "Jouez d’audace. Rehaussez vos tenues et volez la vedette avec ces bottes à couper le souffle. Mode sortie en soirée",
+		  'shoes-191101-fr-d_05', 
+		  'shoes-191101-fr-m_05')
+// END - NIGHT OUT
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - LUXE LACE-UPS
+.row.margin-0
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Collection cuir', 
+		 'https://www.lechateau.com/style/jump/Leather+%26+Suede/category/cat38270703', 
+		 "Magasinez les chaussures en cuir et en suède pour femmes")(class="btn-lc regular margin-40", style="left:1%; top: 63%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Leather+%26+Suede/category/cat38270703', 
+		  "Magasinez les chaussures en cuir et en suède pour femmes",
+		  "Luxe et lacets. Un cuir véritable prête un côté luxueux à ces bottillons lacés à crampons. Mode cuir",
+		  'shoes-191101-fr-d_06', 
+		  'shoes-191101-fr-m_07')
+// END - FLEX + LEATHER
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - FLAT
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Mode Luxe', 
+		 'https://www.lechateau.com/style/jump/LUXE+Collection/category/cat38682206', 
+		 "Magasinez les chaussures faites en Italie pour femmes")(class="btn-lc secondary margin-40", style="left:42%; top: 75%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/LUXE+Collection/category/cat38682206', 
+		  "Magasinez les chaussures faites en Italie pour femmes",
+		  "Magasinez les chaussures faites en Italie pour femmes",
+		  'shoes-191101-fr-d_08', 
+		  'shoes-191101-fr-m_09')
+  .image-map
+    +map('https://www.lechateau.com/style/jump/Flats/category/catsfr51005',"Magasinez les chaussures à talon plat pour femmes")(style="left:0; top:0; width:33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/LUXE+Collection/category/cat38682206',"Magasinez les chaussures faites en Italie pour femmes")(style="left:33.33%; top:0; width:33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Sneakers/category/cat43090702',"Magasinez les chaussures athlétiques pour femmes")(style="left:66.66%; top:0; width:33.33%; height:100%; position:absolute;")
+// END - FLAT
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - FLATS
+.row.LP-DEVICE
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Flats/category/catsfr51005', 
+		  "Magasinez les chaussures à talon plat pour femmes",
+		  "Magasinez les chaussures à talon plat pour femmes",
+		  'shoes-191101-fr-m_11', 
+		  'shoes-191101-fr-m_11')
+// END - FLATS
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - SHOOTIES - MOB
+.row.LP-DEVICE
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		  "Magasinez les demi-botillons pour femmes",
+		  "Magasinez les demi-botillons pour femmes",
+		  'shoes-191101-fr-m_13', 
+		  'shoes-191101-fr-m_13')
+// END - SHOOTIES - MOB
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - SNEAKERS - MOB
+.row.LP-DEVICE
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Sneakers/category/cat43090702', 
+		  "Magasinez les chaussures athlétiques pour femmes",
+		  "Magasinez les chaussures athlétiques pour femmes",
+		  'shoes-191101-fr-m_15', 
+		  'shoes-191101-fr-m_15')
+// END - SNEAKERS - MOB
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - 
+.row.margin-0.LP-DESKTOP
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Talons plats', 
+		 'https://www.lechateau.com/style/jump/Flats/category/catsfr51005', 
+		 "Magasinez les chaussures à talon plat pour femmes")(class="btn-lc secondary margin-40", style="left:12%; top: 73%;")
+    +cta('Demi-bottillons', 
+		 'https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		 "Magasinez les demi-botillons pour femmes")(class="btn-lc secondary margin-40", style="left:44%; top: 73%;")
+    +cta('Chaussures athlétiques', 
+		 'https://www.lechateau.com/style/jump/Sneakers/category/cat43090702', 
+		 "Magasinez les chaussures athlétiques pour femmes")(class="btn-lc secondary margin-40", style="left:76%; top: 73%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Flats/category/catsfr51005', 
+		  "Magasinez les chaussures à talon plat pour femmes",
+		  "Magasinez les chaussures à talon plat pour femmes",
+		  'shoes-191101-fr-d_09', 
+		  'shoes-191101-fr-m_07')
+  .image-map
+    +map('https://www.lechateau.com/style/jump/Flats/category/catsfr51005',"Magasinez les chaussures à talon plat pour femmes")(style="left:0; top:0; width:33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704',"Magasinez les demi-botillons pour femmes")(style="left:33.33%; top:0; width:33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Sneakers/category/cat43090702',"Magasinez les chaussures athlétiques pour femmes")(style="left:66.66%; top:0; width:33.33%; height:100%; position:absolute;")
+// END - 
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - FLEX + LEATHER
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Collection Flex', 
+		 'https://www.lechateau.com/style/jump/FLEX+Collection/category/catmodareflex', 
+		 "Magasinez les chaussures flex pour femmes")(class="btn-lc regular margin-00", style="left:47%; top: 88%;")
+		 
+    +cta('Escarpins',
+		 'https://www.lechateau.com/style/jump/Pumps/category/catsfr51002', 
+		 "Magasinez les escarpins pour femmes")(class="btn-lc regular margin-00", style="left:73%; top: 88%;") 
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/FLEX+Collection/category/catmodareflex', 
+		  "Magasinez les chaussures flex pour femmes",
+		  "Le Château Flex-Intérieur et extérieur 100 % cuir -Première en mousse mémoire-Semelle légère et flexible-Hauteurs de talon parfaites Collection Flex",
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/shoes/shoes-191101-fr-d_11.gif', 
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/shoes/shoes-191101-fr-m_17.gif')
+// END - FLEX + LEATHER
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - LEATHER - MOB
+.row.LP-DEVICE.margin-00
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Pumps/category/catsfr51002', 
+		  "Magasinez les escarpins pour femmes",
+		  "Magasinez les escarpins pour femmes",
+		  'shoes-191101-fr-m_18', 
+		  'shoes-191101-fr-m_18')
+// END - LEATHER - MOB
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - HEELS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Chaussures de party', 
+		 'https://www.lechateau.com/style/jump/Evening/category/cat38130728', 
+		 "Magasinez les chaussures de soirée pour femmes")(class="btn-lc regular margin-40", style="left:3.5%; top: 67%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Evening/category/cat38130728',
+		  "Magasinez les chaussures de soirée pour femmes",
+		  "EL’élégance même. Des soirées VIP aux cocktails de dernière minute, nous avons la chaussure parfaite pour vous, peu importe l’occasion. Chaussures de party",
+		  'shoes-191101-fr-d_13', 
+		  'shoes-191101-fr-m_20')
+// END - HEELS
+//-END--------------------
+

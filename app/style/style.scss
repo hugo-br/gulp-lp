@@ -1,0 +1,17 @@
+@charset 'utf-8';
+.testing {
+  width: percentage(5/7);
+  height: 160px;
+}
+
+.testing .app {
+  color: red;
+}
+
+::placeholder {
+  color: gray;
+}
+
+.grid-container {
+  display: grid;
+}

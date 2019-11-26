@@ -1,0 +1,39 @@
+script(src='https://player.vimeo.com/api/player.js')
+script(type='text/javascript').
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if ( document.documentElement.clientWidth > 769 ) {
+    $(".desktop-only").css({"display":"none"});
+    $("#desktop-video").css({"display":"none"});
+    $(".tablet-video").css({"display":"block"});
+    } else if ( document.documentElement.clientWidth < 769) {
+    $(".tablet-video").css({"display":"none"});
+    }
+    }
+    // Desktop
+    var frame = document.querySelector('#desktop-video');
+    var player = new Vimeo.Player(frame);
+    player.setVolume(0); // mute the video
+    function pauseVideo(that){
+    player.pause();
+    $(".btn-controls.pause").addClass("hidden");
+    $(".btn-controls.play").removeClass("hidden");
+    }
+    function playVideo(that){
+    player.play();
+    $(".btn-controls.play").addClass("hidden");
+    $(".btn-controls.pause").removeClass("hidden");
+    }
+    function muteSound(that){
+    player.setVolume(0);
+    $(".btn-controls.sound-pause").addClass("hidden");
+    $(".btn-controls.sound-play").removeClass("hidden");
+    }
+    function addSound(that){
+    player.setVolume(1);
+    $(".btn-controls.sound-play").addClass("hidden");
+    $(".btn-controls.sound-pause").removeClass("hidden");
+    }
+    player.on('ended', function(data) {
+    $(".btn-controls.pause").addClass("hidden");
+    $(".btn-controls.play").removeClass("hidden");
+    });

@@ -1,0 +1,42 @@
+script.
+    $(document).ready(function(e) {
+    $('#sliderSale').slick({
+    autoplay: true,
+    autoplaySpeed: 4500,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    // appendArrows: '#arrowsTwo > div',
+    appendDots: '#dotsTwo',
+    lazyLoad: 'ondemand',
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true,
+    draggable: true,
+    swipeToSlide: true,
+    touchMove: true,
+    prevArrow: '<button type="button"  class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    adaptiveHeight: true,
+    responsive: [{
+    breakpoint: 1500,
+    settings: {
+    variableWidth: true,
+    centerMode: true,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    }
+    },
+    {
+    breakpoint: 1025,
+    settings: {
+    variableWidth: false,
+    centerMode: false,
+    slidesToShow: 1,
+    }
+    }
+    ]
+    });
+    });

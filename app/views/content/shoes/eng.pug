@@ -1,0 +1,306 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
+
+style.
+    /* HERO CSS */
+    @media (min-width: 1300px) {
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP > a
+    {
+    position: relative;
+    }
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP
+    {
+    height: 0px;
+    }
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP > a {
+    top: 513px;
+    left: -462px;
+    }	
+    }
+    @media (max-width: 1300px) and (min-width: 769px) {
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP > a
+    {
+    position: absolute;
+    }
+    #landingPage > div.row.hero.shoes > div.ctas.LP-DESKTOP > a {
+    left: 7%;
+    top: 69%;
+    }
+    }
+    @media (max-width: 768px) {
+    .row.margin-0 {
+    margin-top: 60px;
+    margin-top: calc((40/591) * 100%);
+    }
+    }
+
+//-START ----------------------
+// ROW - HERO
+.row.hero.row1.shoes
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop New Boots', 
+		 'https://www.lechateau.com/style/jump/New+Arrivals/category/cat400161', 
+		 "Shop New Women's Shoes")(class="btn-lc secondary margin-00", style="")
+  // image
+  +hero('https://www.lechateau.com/style/jump/New+Arrivals/category/cat400161', 
+		  "Shop New Women's Boots",
+		  "Time To Boot It Up. Standout with a statement knee-high or keep cozy in an off-duty bootie. Discover this fall’s must-have styles. Shop New Boots",
+		  'shoes-191101-en-d-2000_01_01',
+		  'shoes-191101-en-d_01',
+		  'shoes-191101-en-m_01',
+		  false)
+// END - 
+//- END - ROW - HERO
+//-END--------------------
+
+
+// ROW - PROMO
+.row
+  // CTAs
+  .ctas.LP-DESKTOP
+    a.btn-lc.regular.margin-00(href='https://www.lechateau.com/style/jump/Extra+%2425+Off+Tops+%26+Bottoms/category/cat47100725', target='_top', title='Shop Sale Tops & Bottoms', style='left:36%; top: 80%;') TOPS & BOTTOMS
+    a.btn-lc.regular.margin-00(href='https://www.lechateau.com/style/jump/All+Shoes+%26+Boots/category/cat260038', target='_top', title='Shop Sale Boots & Shoes', style='left:53%; top: 80%;') BOOTS & SHOES
+  // @end CTAs
+  // BACKGROUND IMAGE
+  .image-bckg
+    picture
+      //if IE 9
+        audio
+      // Mobile
+      source(media='(max-width: 768px)', srcset='https://lechateau.scene7.com/is/image/LeChateau/homepagebanner-promo-311019-en-m?$jpeg-prog$&cache=off')
+      // Desktop
+      source(media='(min-width: 768px)', srcset='https://lechateau.scene7.com/is/image/LeChateau/homepagebanner-promo-311019-en-d?$jpeg-prog$&cache=off')
+      //if IE 9
+      img(src='https://lechateau.scene7.com/is/image/LeChateau/homepagebanner-promo-311019-en-m?$jpeg-prog$&cache=off', alt='Shop Sale', decoding='async')
+  // @end BACKGROUND
+  .image-map.LP-DESKTOP
+    a(href='https://www.lechateau.com/style/jump/Extra+%2425+Off+Tops+%26+Bottoms/category/cat47100725', title='Shop Sale Tops & Bottoms', style='position:absolute; left: 0; top: 0; width: 50%; height:100%;')  
+    a(href='https://www.lechateau.com/style/jump/All+Shoes+%26+Boots/category/cat260038', title='Shop Sale Boots & Shoes', style='position:absolute; left: 50%; top: 0; width: 50%; height:100%;')  
+  .image-map.LP-DEVICE
+    a(href='https://www.lechateau.com/style/jump/Extra+%2425+Off+Tops+%26+Bottoms/category/cat47100725', title='Shop Sale Tops & Bottoms', style='position:absolute; left: 0; top: 0%; width: 100%; height:80%;')  
+    a(href='https://www.lechateau.com/style/jump/All+Shoes+%26+Boots/category/cat260038', title='Shop Sale Boots & Shoes', style='position:absolute; left: 0%; top: 80%; width: 100%; height:20%;')  
+// ROW END - PROMO
+
+
+
+//-START ----------------------
+// ROW - ALL BOOTS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop all boots', 
+		 'https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		 "Shop Women's Boots")(class="btn-lc regular margin-40", style="left:40%; top: 40%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		  "Shop Women's Boots",
+		  "Cuddle Up To Comfort. You don’t have to sacrifice comfort for fashion. These ultra-stylish selects are the best of both worlds. Shop All Boots",
+		  'shoes-191101-en-d_03', 
+		  'shoes-191101-en-m_03',
+		  false)
+// END - ALL BOOTS
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - NIGHT OUT
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop night out', 
+		 'https://www.lechateau.com/style/jump/Night+Out/category/cat39170936', 
+		 "Shop Women's Night Out Shoes")(class="btn-lc regular margin-40", style="left:72%; top: 50%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Night+Out/category/cat39170936', 
+		  "Shop Women's Night Out Shoes",
+		  "Bold And Beautiful. These show-stopping statement boots will elevate any ensemble. Shop Night Out",
+		  'shoes-191101-en-d_05', 
+		  'shoes-191101-en-m_05')
+// END - NIGHT OUT
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - LUXE LACE-UPS
+.row.margin-0
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop Leather', 
+		 'https://www.lechateau.com/style/jump/Leather+%26+Suede/category/cat38270703', 
+		 "Shop Women's Leather and Suede Shoes")(class="btn-lc regular margin-40", style="left:1%; top: 63%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Leather+%26+Suede/category/cat38270703', 
+		  "Shop Women's Leather and Suede Shoes",
+		  "Lux Lace-Ups. Genuine leather elevates the look of these edgy lug-soled lace-ups. Shop Leather",
+		  'shoes-191101-en-d_06', 
+		  'shoes-191101-en-m_07')
+// END - FLEX + LEATHER
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - FLAT
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('LUXE COLLECTION', 
+		 'https://www.lechateau.com/style/jump/LUXE+Collection/category/cat38682206', 
+		 "Shop Women's Italian Leather Boots & Shoes")(class="btn-lc secondary margin-40", style="left:42%; top: 75%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/LUXE+Collection/category/cat38682206', 
+		  "Shop Women's Italian Leather Boots & Shoes",
+		  "Shop Women's Italian Leather Boots & Shoes",
+		  'shoes-191101-en-d_08', 
+		  'shoes-191101-en-m_09')
+  .image-map
+    +map('https://www.lechateau.com/style/jump/Flats/category/catsfr51005',"Shop Women's Flat Shoes")(style="left:0; top:0; width:33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/LUXE+Collection/category/cat38682206',"Shop Women's Italian Leather Boots & Shoes")(style="left:33.33%; top:0; width:33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Sneakers/category/cat43090702',"Shop Women's Sneakers")(style="left:66.66%; top:0; width:33.33%; height:100%; position:absolute;")
+// END - FLAT
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - FLATS
+.row.LP-DEVICE
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Flats/category/catsfr51005', 
+		  "Shop Women's Flat Shoes",
+		  "Shop Women's Flat Shoes",
+		  'shoes-191101-en-m_11', 
+		  'shoes-191101-en-m_11')
+// END - FLATS
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - SHOOTIES - MOB
+.row.LP-DEVICE
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		  "Shop Women's Shooties",
+		  "Shop Women's Shooties",
+		  'shoes-191101-en-m_13', 
+		  'shoes-191101-en-m_13')
+// END - SHOOTIES - MOB
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - SNEAKERS - MOB
+.row.LP-DEVICE
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Sneakers/category/cat43090702', 
+		  "Shop Women's Sneakers",
+		  "Shop Women's Sneakers",
+		  'shoes-191101-en-m_15', 
+		  'shoes-191101-en-m_15')
+// END - SNEAKERS - MOB
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - Flats/Shooties/Sneaker
+.row.margin-0.LP-DESKTOP
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('FLATS', 
+		 'https://www.lechateau.com/style/jump/Flats/category/catsfr51005', 
+		 "Shop Women's Flat Shoes")(class="btn-lc secondary margin-40", style="left:12%; top: 73%;")
+    +cta('SHOOTIES', 
+		 'https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704', 
+		 "Shop Women's Shooties")(class="btn-lc secondary margin-40", style="left:44%; top: 73%;")
+    +cta('SNEAKERS', 
+		 'https://www.lechateau.com/style/jump/Sneakers/category/cat43090702', 
+		 "Shop Women's Sneakers")(class="btn-lc secondary margin-40", style="left:76%; top: 73%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Flats/category/catsfr51005', 
+		  "Shop Women's Flat Shoes",
+		  "Shop Women's Flat Shoes",
+		  'shoes-191101-en-d_09', 
+		  'shoes-191101-en-m_07')
+  .image-map
+    +map('https://www.lechateau.com/style/jump/Flats/category/catsfr51005',"Shop Women's Flat Shoes")(style="left:0; top:0; width:33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704',"Shop Women's Shooties")(style="left:33.33%; top:0; width:33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Sneakers/category/cat43090702',"Shop Women's Sneakers")(style="left:66.66%; top:0; width:33.33%; height:100%; position:absolute;")
+// END - 
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - FLEX
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop flex collection', 
+		 'https://www.lechateau.com/style/jump/FLEX+Collection/category/catmodareflex', 
+		 "Shop Women's Flex Shoes")(class="btn-lc regular margin-00", style="left:47%; top: 88%;")
+		 
+    +cta('Shop all pumps',
+		 'https://www.lechateau.com/style/jump/Pumps/category/catsfr51002', 
+		 "Shop Women's Pumps")(class="btn-lc regular margin-00", style="left:73%; top: 88%;") 
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/FLEX+Collection/category/catmodareflex', 
+		  "Shop Women's Flex Shoes",
+		  "Le Château Flex-100% leather inside & out. Memory foam insole-Lightweight flexible sole-The perfect heel heights Shop flex collection",
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/shoes/shoes-191101-en-d_11_11.gif', 
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/shoes/shoes-191011-en-m_07.gif')
+// END - FLEX
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - LEATHER - MOB
+.row.LP-DEVICE.margin-00
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Pumps/category/catsfr51002', 
+		  "Shop Women's Pumps",
+		  "Shop Women's Pumps",
+		  'shoes-191101-en-m_18', 
+		  'shoes-191101-en-m_18')
+// END - LEATHER - MOB
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - HEELS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop Evening  Shoes', 
+		 'https://www.lechateau.com/style/jump/Evening/category/cat38130728', 
+		 "Shop Women's Evening Shoes")(class="btn-lc regular margin-40", style="left:3.5%; top: 67%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Evening/category/cat38130728',
+		  "Shop Women's Evening Shoes",
+		  "Elegant Heels. From VIP black tie to cocktails on the fly, we have the perfect shoe for every occasion. Shop Evening Shoes",
+		  'shoes-191101-en-d_13', 
+		  'shoes-191101-en-m_20')
+// END - HEELS
+//-END--------------------
+

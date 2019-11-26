@@ -1,0 +1,87 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
+|
+|
+|
+|
+
+//-START ----------------------
+// ROW - 
+.row.hero
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop The Collection', 
+		 'https://www.lechateau.com/style/jump/New+Arrivals/category/catwfr10020', 
+		 "Shop Women's Fall Arrivals")(class="btn-lc regular margin-00", style="left:40%; bottom:0%;")
+  |
+  |
+  // image
+  +hero('https://www.lechateau.com/style/jump/New+Arrivals/category/catwfr10020', 
+		  "Shop Women's Fall Arrivals",
+		  "your lifestyled. New collection. Sizes available from 00-22W online & in select stores. Shop the collection.",
+		  'lechateau-190904-en-d_01',
+		  'lechateau-190904-en-d_01a',
+		  'lechateau-082919-en-m_01')
+  |
+  |
+|
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - 
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Explore The Wedding Boutique', 
+		 'https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
+		 'Explore The Wedding Boutique')(class="btn-lc regular margin-00", style="left:53%; top: 93%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
+		  'Explore The Wedding Boutique',
+		  "The Wedding Boutique. Dreamy styles for every wedding this season, no matter the dress code. Explore the wedding boutique >",
+		  'lechateau-091019-en-d_19', 
+		  'lechateau-091019-en-m_21')
+  |
+  |
+|
+|
+// END - 
+|
+|
+|
+|
+//-END--------------------

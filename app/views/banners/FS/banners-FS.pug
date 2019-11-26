@@ -1,0 +1,43 @@
+include ../../mixins/banner
+//- FS(desk, mob, lang)
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(content='True', name='HandheldFriendly')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/landing/assets/css/main.css')
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/assets/fonts/MyFontsWebfontsKit.css')
+    |
+    |
+    |
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js')
+    |
+    |
+    |
+    // COPY ONLY THIS CSS FOR BCC
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/landing/assets/css/lc-category-banners-V3.css')
+    |
+    |
+    //- Banner CSS
+    include ../../style/FS-banner
+  |
+  |
+  |
+  body
+    div(style='max-width:1025px;')
+      +FS('outlet-FS-191009_en_d', 'outlet-FS-191009_en_m', 'flashsale/1009_dressFlashSale_en', 'en')
+      +FS('outlet-FS-191009_fr_d', 'outlet-FS-191009_fr_m', 'flashsale/1009_dressFlashSale_fr', 'fr')
+  |
+  |
+  |
+  |  
+  script(language='javascript', type='text/javascript').
+    $(window).load(function() {
+    $(".outlet-bar").addClass("black");
+    })
+  |
+  |  
+  include ../../js/details

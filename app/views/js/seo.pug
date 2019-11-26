@@ -1,0 +1,13 @@
+script.
+    $(document).ready(function(e) {
+    $(".show").on("click", function() {
+    var linkText = $(this).text();
+    if (linkText == "Read more") {
+    $(this).text("Read less");
+    $(".more-content").removeClass("hide");
+    } else {
+    $(this).text("Read more");
+    $(".more-content").addClass("hide");
+    }
+    })
+    })

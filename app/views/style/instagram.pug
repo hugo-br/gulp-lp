@@ -1,0 +1,70 @@
+style.
+  .row.flex .hover:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  }
+  .row.flex .hover:hover:before {
+  content: "";
+  background-color: white;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  }
+  .hoverinsta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 22;
+  }
+  .row.flex .hover:hover .hoverinsta {
+  visibility: visible;
+  }
+  .hovermiddleverticalAlign {
+  height: auto;
+  word-wrap: break-word;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  }
+  .hovercontent {
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  }
+  ul.instabar {
+  padding: 20px 0;
+  }
+  ul.instabar li a.in:after {
+  content: "\f16d";
+  }
+  ul.instabar li a:after {
+  font-family: fontawesome;
+  content: '+';
+  font-size: 24px;
+  font-weight: 100;
+  color: black;
+  }
+  .instarow img {
+  width:100%;
+  }
+  /*INSTAGRAM MOBILE*/
+  .mob-slider.mob-slider2 .slide {
+  width: 85%;
+  flex-shrink: 0;
+  height: 100%;
+  }
+  @media (min-width: 591px) {
+  .mob-slider.mob-slider2 .slide {
+  width: 60%;
+  flex-shrink: 0;
+  height: 100%;
+  }
+  }
+  .mob-slider.mob-slider2 .slide {
+  padding-left: 15px;
+  }

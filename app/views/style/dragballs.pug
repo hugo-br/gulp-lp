@@ -1,0 +1,55 @@
+|
+|
+// 	DRAGBALLS CSS
+style.
+	#mob-silder-wrap {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	display: none;
+	}
+	.mob-slider {
+	overflow-x: auto;
+	display: flex;
+	-webkit-overflow-scrolling: touch;
+	-webkit-scroll-snap-type: mandatory;
+	-ms-scroll-snap-type: mandatory;
+	scroll-snap-type: mandatory;
+	overflow-y: hidden;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	}
+	.mob-slider .slide {
+	width: 28.57142857142857%;
+	flex-shrink: 0;
+	height: 100%;
+	}
+	.mob-slider::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+	display: none !important;
+	}
+	.mob-slider::-webkit-scrollbar,
+	.mob-slider::-webkit-scrollbar-thumb {
+	overflow: visible;
+	border-radius: 4px;
+	background: transparent;
+	}
+	.mob-slider::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0);
+	background: transparent;
+	display: none;
+	}
+	.mob-slider::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0);
+	display: none;
+	}
+	.cover-bar {
+	position: absolute;
+	background: #fff;
+	height: 3px;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	-webkit-transition: all .5s;
+	opacity: 1;
+	}

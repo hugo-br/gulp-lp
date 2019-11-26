@@ -1,0 +1,145 @@
+style.
+    .shop-icon {
+    position: absolute;
+    z-index: 4;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    }
+    .shop-icon .plus-sign {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    }
+    /* Tooltip container */
+    .shop-icon .tooltip {
+    position: relative;
+    display: inline-block;
+    left: -150px;
+    top: 200px;
+    }
+    /* Tooltip text */
+    .shop-icon .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 6px;
+    font-family: MuseoSans-100;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 50;
+    }
+    .shop-icon:hover .tooltip .tooltiptext {
+    visibility: visible;
+    color: white;
+    }
+    /* Animation */
+    @-webkit-keyframes pulsate {
+    0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+    }
+    45% {
+    -webkit-transform: scale(1.75);
+    transform: scale(1.75);
+    opacity: 0;
+    }
+    }
+    @keyframes pulsate {
+    0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+    }
+    45% {
+    -webkit-transform: scale(1.75);
+    transform: scale(1.75);
+    opacity: 0;
+    }
+    }
+    @-webkit-keyframes stop-pulsate {
+    from {
+    opacity: 0.4;
+    }
+    to {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    opacity: 0;
+    }
+    }
+    @keyframes stop-pulsate {
+    from {
+    opacity: 0.4;
+    }
+    to {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    opacity: 0;
+    }
+    }
+    /* Button */
+    .btn-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    .btn-pulse .circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 22px;
+    height: 22px;
+    margin: -0.666em auto auto -0.666em;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.8;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    transition: opacity .2s ease-in, -webkit-transform .1s ease-out;
+    transition: opacity .2s ease-in, transform .1s ease-out;
+    transition: opacity .2s ease-in, transform .1s ease-out, -webkit-transform .1s ease-out;
+    color: white;
+    font-size: 1.5em;
+    padding: 0;
+    text-align: center;
+    line-height: 32px;
+    overflow: hidden;
+    }
+    .btn-pulse .circle:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    }
+    .btn-pulse .circle:active {
+    -webkit-transform: scale(0.875);
+    transform: scale(0.875);
+    }
+    .btn-pulse .ring {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    margin: -16px auto auto -16px;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    opacity: 0;
+    -webkit-animation: pulsate 3s ease-out infinite;
+    animation: pulsate 3s ease-out infinite;
+    }
+    .btn-pulse:hover .ring {
+    -webkit-animation: none;
+    animation: none;
+    }
+    .btn-pulse:active .ring {
+    -webkit-animation: stop-pulsate 0.3s;
+    animation: stop-pulsate 0.3s;
+    }

@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Landing Page</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta content="True" name="HandheldFriendly">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=5">
+  <meta name="nosnippets">
+  <meta name="theme-color" content="#85031b">
+  <meta name="description" content="Landing Page">
+  
+  
+  
+  <!-- !!! DO NOT INCLUDE IN BCC !!!-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  
+  <!-- !!! DO NOT INCLUDE IN BCC !!!-->
+  
+  
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+    
+  </script>
+  
+  
+  <script src="https://static.lechateau.com/html/landing/templates/new/picturefill.min.js" async=""></script>
+  
+  
+  <style>
+    /* for fullpage on landing page 
+      .listing .wrapper:not(.top) {
+      padding: 0px!important;
+      }
+      .sub-header-black {
+      display: none;
+      }
+      #content>div.wrapper {
+      width: 100%;
+      max-width: 2000px;
+      }
+      #content>.wrapper>.sidebar {
+      display: none;
+      }
+      #content.landing .top .breadcrumbs, #content.listing .top .breadcrumbs {
+      display: none;
+      }
+      @media (max-width: 767px) {
+      .categoryBanner, #catBanner {
+      display: block;
+      }
+      }
+      */
+    /* Break points */
+    @media (min-width: 769px) {
+      .LP-DESKTOP {
+        display: block;
+      }
+      
+      .LP-DEVICE {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .LP-DEVICE {
+        display: block;
+      }
+      
+      .LP-DESKTOP {
+        display: none;
+      }
+    }
+    
+    /* END Break points */
+    .row,
+    #landingPage {
+      max-width: 2000px;
+      margin: auto;
+    }
+    
+    .row {
+      position: relative;
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+      max-width: 1300px;
+      text-align: center;
+    }
+    
+    .row.hero {
+      max-width: 2000px;
+    }
+    
+    .row .image-bckg {
+      display: block;
+      margin: auto;
+      box-sizing: border-box;
+      position: relative;
+      margin-top: 0px;
+      width: 100%;
+    }
+    
+    .row .image-bckg img {
+      display: block;
+      margin: auto;
+    }
+    
+    .row .text-wrap {
+      text-align: center;
+    }
+    
+    .row .text-over {
+      display: block;
+      width: 100%;
+      max-width: 591px;
+      position: relative;
+    }
+    
+    .row .ctas>a {
+      z-index: 4;
+    }
+    
+    .row .half {
+      width: 100%;
+      display: block;
+    }
+    
+    /*   MARGINS   */
+    @media (min-width: 769px) {
+      .row {
+        margin-top: 80px;
+      }
+    }
+    
+    @media (max-width: 1300px) and (min-width: 769px) {
+      .row {
+        /*     margin-top: calc( (60 / 1300) * 100% ); */
+      }
+    }
+    
+    @media (max-width: 768px) {
+
+      .row,
+      .row .half:nth-child(2) {
+        margin-top: 60px;
+        /*	margin-top: calc((60/591) * 100%); */
+      }
+    }
+    
+    @media (max-width: 591px) {
+
+      .row,
+      .row .half:nth-child(2) {
+        margin-top: 60px;
+        margin-top: calc((60/591) * 100%);
+      }
+    }
+    
+    /* First Row */
+    .row.row1 {
+      margin-top: 0px;
+    }
+    
+    @media (min-width: 1024px) {
+      .show-desk {
+        display: block;
+      }
+      
+      .show-tab {
+        display: none !important;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      .show-desk {
+        display: none !important;
+      }
+      
+      .show-tab {
+        display: block;
+      }
+    }
+    
+    .lazyload,
+    .lazyloading {
+      min-height: 100vh;
+    }
+    
+    @media (max-width: 591px) {
+      .margin-00.mob-20 {
+        margin-top: 60px;
+        margin-top: calc((60/591) * 100%);
+      }
+    }
+    
+  </style>
+  
+  
+  
+  
+  
+  <!-- 	SEO GRID CSS-->
+  <style>
+    .show {
+      display: none;
+      color: black;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    .containhidden {
+      display: none;
+    }
+    
+    .more-content.hide {
+      display: block;
+    }
+    
+    @media (max-width: 591px) {
+      .show {
+        display: block;
+      }
+      
+      .more-content.hide {
+        display: none;
+        transition: transform 1s linear;
+      }
+      
+      .more-content {
+        display: block;
+        transition: transform 1s linear;
+      }
+      
+      .containhidden {
+        display: block;
+      }
+    }
+    
+    .grid-seo {
+      width: 90%;
+      display: block;
+      padding-bottom: 10px;
+      margin: 0 auto;
+    }
+    
+    .grid-seo h1 {
+      width: 100%;
+      margin-bottom: 15px;
+      padding-top: 10px;
+      font-family: 'MuseoSans-500';
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    
+    .grid-seo h2.title {
+      width: 100%;
+      margin-bottom: 15px;
+      padding-top: 10px;
+      font-family: 'MuseoSans-500';
+      font-size: 14px;
+      text-transform: uppercase;
+      display: block;
+    }
+    
+    .grid-seo span {
+      font-family: 'MuseoSans-300';
+      font-size: 12px;
+      text-align: justify;
+    }
+    
+    .grid-seo h2 {
+      font-family: 'MuseoSans-300';
+      font-size: 12px;
+      text-align: justify;
+      display: inline;
+    }
+    
+    .grid-seo h3 {
+      font-family: 'MuseoSans-300';
+      font-size: 12px;
+      text-align: justify;
+      display: inline;
+    }
+    
+    .grid-seo a {
+      text-decoration: underline;
+      font-weight: bold;
+      display: inline-block;
+    }
+    
+    #content>div.wrapper>div.main {
+      padding-top: 0px !important;
+    }
+    
+    @media (max-width: 768px) {
+      .grid-seo {
+        width: 90%;
+        margin: auto;
+      }
+    }
+    
+  </style>
+  
+  
+  
+  <script src="https://static.lechateau.com/html/landing/templates/new/lazyload.min.js" async=""></script>
+  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <style>
+    #sliderTwo {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1300px;
+      width: 100%;
+      position: relative;
+    }
+    
+    #sliderRes .slick-slide {
+      max-width: 1300px;
+      width: 100%;
+    }
+    
+    #sliderTwo #dotsTwo button {
+      background: none;
+      color: #babbbd;
+      height: 9px;
+      line-height: 9px;
+      padding: 0px;
+      display: inline-block;
+      float: left;
+      width: 9px;
+      text-transform: uppercase;
+      font-size: 0px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      min-width: 9px;
+      background-color: #babbbd;
+      margin-right: 9px;
+    }
+    
+    #sliderTwo .slick-dots {
+      width: 100%;
+      text-align: center;
+    }
+    
+    #sliderTwo .slick-dots li {
+      display: inline-block;
+    }
+    
+    #sliderTwo #dotsTwo .slick-active button {
+      background-color: #76787c;
+      color: #76787c;
+    }
+    
+    #sliderTwo #arrowsTwo button {
+      background: none;
+      color: #b6b0b0;
+      height: 30px;
+      line-height: 44px;
+      padding: 0 15px;
+      display: inline-block;
+      min-width: 30px;
+      text-transform: uppercase;
+      font-size: 30px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    #sliderTwo #arrowsTwo {
+      position: absolute;
+      top: 45%;
+      width: 100%;
+      margin: auto;
+    }
+    
+    #sliderTwo #arrowsTwo>div {
+      position: relative;
+      width: 100%;
+      max-width: 2000px;
+      margin: auto;
+      display: block;
+    }
+    
+    /* Prev arrow */
+    #sliderTwo #arrowsTwo .slick-prev {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    
+    /* Next arrow */
+    #sliderTwo #arrowsTwo .slick-next {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+    #sliderTwo #arrowsTwo a.button:after,
+    #sliderTwo #arrowsTwo button:after,
+    #sliderTwo #dotsTwo a.button:after,
+    #sliderTwo #dotsTwo button:after {
+      border: none;
+    }
+    
+    #sliderTwo .slick-slide .hero {
+      width: 100%;
+      max-width: 2000px;
+      padding: 0 20px;
+    }
+    
+    #sliderTwo .slick-slide img {
+      max-width: none;
+      width: 100%;
+    }
+    
+  </style>
+</head>
+
+<body>
+  
+  
+  <noscript id="deferred-styles">
+    <!-- !!! DO NOT INCLUDE IN BCC !!!-->
+    <link rel="stylesheet" type="text/css" href="https://static.lechateau.com/static/css/combined.min.css?bust=4c6557c">
+    <link rel="stylesheet" type="text/css" href="https://static.lechateau.com/html/landing/templates/new/MyFontsWebfontsKit.min.css">
+    
+    <!-- !!! DO NOT INCLUDE IN BCC !!!-->
+    <link rel="stylesheet" type="text/css" href="https://static.lechateau.com/html/landing/templates/new/landing-min-3-1.css">
+    
+  </noscript>
+  
+  
+  
+  <div id="landingPage">
+    
+    
+    
+    
+    
+    
+    
+    <!-- ROW - -->
+    <div class="row row1">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc gothamMed underlineCTA white margin-40" href="https://www.lechateau.com/style/jump/Bride/category/cat38761590" title="Shop Bridal Gowns" style="left:66%; top:54%;">Shop bridal dresses</a>
+        
+        <a class="btn-lc gothamMed underlineCTA white margin-20" href="https://www.lechateau.com/style/editorial.jsp?content=lb2019-wb" title="Shop Wedding Looks for Women" style="left:65.5%; top:62%;">Explore the lookbook</a>
+      </div>
+      
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Bride/category/cat38761590" title="Shop Bridal Gowns">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_01?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_01?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img src="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_01?$jpeg-prog$" alt="Find the One. Fall head over heels for our most romantic dresses, beautifully made for your big day. Shop bridal dresses " decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - CAROUSEL-->
+    
+    
+    <div class="row hero" id="sliderTwo">
+      <div class="slider-res" id="sliderSale">
+        <div><a href="https://www.lechateau.com/style/jump/BRIDAL376946_003/productDetail/Bride/BRIDAL376946_003/" title="Shop Style" target="_blank">
+            <picture>
+              <!-- [if IE 9]><audio><![endif]-->
+              <!-- Mobile-->
+              <source media="(max-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/https://lechateau.scene7.com/is/image/LeChateau/BRIDAL376946_003__1_469x587.jpg?id=6fEqP1&amp;fmt=jpg&amp;fit=constrain,1&amp;wid=501&amp;hei=627?$jpeg-prog$" />
+              
+              <!-- Desktop-->
+              <source media="(min-width:  768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/https://lechateau.scene7.com/is/image/LeChateau/BRIDAL376946_003__1_469x587.jpg?id=6fEqP1&amp;fmt=jpg&amp;fit=constrain,1&amp;wid=501&amp;hei=627?$jpeg-prog$" />
+              
+              <!-- [if IE 9]></audio><![endif]-->
+              <img src="https://lechateau.scene7.com/is/image/LeChateau/https://lechateau.scene7.com/is/image/LeChateau/BRIDAL376946_003__1_469x587.jpg?id=6fEqP1&amp;fmt=jpg&amp;fit=constrain,1&amp;wid=501&amp;hei=627?$jpeg-prog$" alt="Shop Style" decoding="async" />
+            </picture>
+          </a></div>
+      </div>
+    </div>
+    <!-- ROW - Bridemaid-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702" title="Shop Bridal Gowns" style="left:20%; bottom:3%;">Shop bridesmaid dresses</a>
+        
+        <a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/jump/Mother+of+the+Bride/category/cat38761594" title="Shop Mother of the Bride Dresses" style="left:55%; bottom:3%;">Shop mother of the bride dresses</a>
+      </div>
+      
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702" title="Shop Bridal Gowns">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_05?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_05?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img src="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_05?$jpeg-prog$" alt="On the bride’s side. Shop bridesmaid dresses" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+      <div class="image-map LP-DESKTOP">
+        
+        <a href="https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702 " title="Shop Bridesmaid Dresses" style="width:50%; height:100%; top:0;left:0; position:absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Mother+of+the+Bride/category/cat38761594" title="Shop Mother of the Bride Dresses" style="width:50%; height:100%; top:0; left:50%; position:absolute;">&nbsp;</a>
+      </div>
+    </div>
+    
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - Mother the bride-->
+    <div class="row LP-DEVICE">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Mother+of+the+Bride/category/cat38761594" title="Shop Mother of the Bride Dresses">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_06?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_06?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Shop mother of the bride dresses" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    
+    <!-- END - Mother the bride-->
+    
+    
+    
+    <!-- ROW - EMAIL CHARLOTTE-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc gothamMed underlineCTA margin-00" href="mailto:charlotte@lechateau.com" title="Ask Charlotte, Our Wedding Stylist" style="left:36%; bottom:11%;">Email Charlotte</a>
+        
+        <a class="btn-lc gothamMed underlineCTA margin-00" href="https://www.lechateau.com/style/editorial.jsp?content=ws" title="Book Your Wedding Styling Appointment" style="left:51%; bottom:11%;">Schedule a 1-on-1</a>
+      </div>
+      
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702" title="Shop Bridal Gowns">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_08?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_07-v2?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="We'd love to help you! Email our expert stylist, Charlotte, with your questions about personal style or fit. She can help you find the perfect dress and shoes for any occasion. For a personalised one-on-one, schedule an appointment with our stylists. Email Charlotte" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+      <div class="image-map LP-DESKTOP">
+        
+        <a href="mailto:charlotte@lechateau.com" title="Ask Charlotte, Our Wedding Stylist" style="width:50%; height:100%; top:0;left:0; position:absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/editorial.jsp?content=ws" title="Book Your Wedding Styling Appointment" style="width:50%; height:100%; top:0; left:50%; position:absolute;">&nbsp;</a>
+      </div>
+    </div>
+    
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - Occassion Dresses-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/Special+Occasion/category/cat44420704 " title="Ask Charlotte, Our Wedding Stylist" style="left:22%; top:69%;">Shop all occasion dresses</a>
+      </div>
+      
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Special+Occasion/category/cat44420704" title="Shop Special Occasion Dresses">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_10?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_09?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="RSVP in Style. Still got weddings and events to plan for? We’ve got you covered. Shop all occasion dresses" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - Cocktail-->
+    <div class="row margin-00 mob-20">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/Cocktail+%26+Party/category/cat44420705" title="Shop Cocktail Dresses" style="left:54%; top:77%;">Shop cocktail dresses</a>
+      </div>
+      
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Cocktail+%26+Party/category/cat44420705" title="Shop Cocktail Dresses">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_12?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_10?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Cocktail (Dress) Time! Party-perfect dresses that’ll make an impression. Shop cocktail dresses" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - Cocktail-->
+    
+    
+    
+    <!-- ROW - Evening Dresses-->
+    <div class="row margin-00 mob-20">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/Black+Tie/category/cat44430702" title="Shop Evening Dresses" style="left:23%; bottom:2%;">Shop evening dresses</a>
+      </div>
+      
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Black+Tie/category/cat44430702" title="Shop Evening Dresses">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_14?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_11?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Evening Standard.Make a grand entrance in a statement style. Shop evening dresses" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - SHOES-->
+    <div class="row margin-00 mob-20">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/All+Shoes/category/cat38761597" title="Shop Wedding Shoes" style="left:60%; top:54%;">Shop shoes</a>
+      </div>
+      
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/All+Shoes/category/cat38761597" title="Shop Wedding Shoes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_16?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_13?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Party Heels. Hit the dance floor, there’s a pair for every occasion. Shop shoes" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - Accessories-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/All+Accessories/category/cat38761596" title="Shop Wedding Accessories" style="left:77%; top:64%;">Shop accessories</a>
+      </div>
+      
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/All+Accessories/category/cat38761596" title="Shop Wedding Accessories">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/content/LeChateau/landing/shops/Wedding%20boutique/wedding-191009-en-m_17-v2.gif" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_15?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="All about the Extras. Add that perfect finishing touch with pretty extras. Shop accessories" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - Intimates-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/Intimates/category/cat38951136" title="Shop Wedding Intimates" style="left:16%; top:59%;">Shop intimates</a>
+      </div>
+      
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Intimates/category/cat38951136" title="Shop Wedding Intimates">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-m_19?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-191009-en-d_17?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Underneath it All. Flattering pieces that help a stunning dress look its best. Shop intimates " decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - APPOINTMENT ROW-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc secondary margin-00" href="https://www.lechateau.com/style/jump/Suits/category/cat38761603" title="Shop all suits" style="left:65%; top: 49%; width: 20%;">SHOP ALL SUITS</a>
+        
+        <a class="btn-lc secondary margin-00" href="https://www.lechateau.com/style/editorial.jsp?content=ws" title="Book Your Styling Appointment" style="left:65%; top: 73%; width: 20%;">BOOK THE GROOM ROOM</a>
+      </div>
+      
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Suits/category/cat38761603" title="Shop all suits">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-m_23?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-d_17?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Shop all suits" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+      <div class="image-map LP-DESKTOP">
+        
+        <a href="https://www.lechateau.com/style/jump/Suits/category/cat38761603" title="Shop all suits" style="left:0; top:0; height:60%; width:100%; position:absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/editorial.jsp?content=ws" title="Book Your Styling Appointment" style="left:0%; top:60%; height:40%; width:100%; position:absolute;">&nbsp;</a>
+      </div>
+    </div>
+    
+    <!-- END - -->
+    
+    
+    
+    <!-- ROW - MEN BOTTOM-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/jump/Blazers/category/cat38761604" title="Explore The Wedding Boutique" style="left:10%; bottom: 10%;">Shop Blazers</a>
+        
+        <a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/jump/Dress+Shirts/category/cat38901007" title="Explore The Wedding Boutique" style="left:43%; bottom: 10%;">Shop Shirts</a>
+        
+        <a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/browse/subcategoryBanner.jsp?categoryId=cat38901009" title="Explore The Wedding Boutique" style="left:78%; bottom: 10%;">Shop Cufflinks</a>
+      </div>
+      
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Blazers/category/cat38761604" title="Shop Blazers">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/content/LeChateau/landing/shops/Wedding%20boutique/wedding-190923-fr-m_27.gif" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-d_18?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="x" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+      <div class="image-map LP-DESKTOP">
+        
+        <a href="https://www.lechateau.com/style/jump/Blazers/category/cat38761604" title="Shop Blazers" style="left:0; top:0; height:100%; width:33.33%; position:absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Dress+Shirts/category/cat38901007" title="Shop Shirts" style="left:33.33%; top:0; height:100%; width:33.33%; position:absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/browse/subcategoryBanner.jsp?categoryId=cat38901009" title="Shop Accessories" style="left:66.66%; top:0; height:100%; width:33.33%; position:absolute;">&nbsp;</a>
+      </div>
+    </div>
+    
+    <!-- END - -->
+    
+    
+    
+    
+    
+    
+    <!-- ROW - MEN BOTTOM-->
+    <div class="row LP-DEVICE margin-00">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Blazers/category/cat38761604" title="Shop Blazers">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-m_28?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-m_28?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - -->
+    
+    
+    
+    
+    
+    
+    <!-- ROW - MEN BOTTOM-->
+    <div class="row LP-DEVICE margin-00">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Blazers/category/cat38761604" title="Shop Blazers">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-m_29?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-m_29?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - -->
+    
+    
+    
+    
+    
+    
+    <!-- ROW - MEN BOTTOM-->
+    <div class="row LP-DEVICE margin-00">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Blazers/category/cat38761604" title="Shop Blazers">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-m_30?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/wedding-190923-en-m_30?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+    <!-- END - -->
+    
+    
+    
+    
+    
+    
+    <!-- SEO-->
+    <div class="grid-seo margin-20 stay">
+      <div style="max-width: 1300px;margin:0 auto;">
+        <h1>WEDDING BOUTIQUE</h1>
+        <div><span>Discover LE CH&Acirc;TEAU's Wedding Boutique and shop our collection of beautiful <a href="https://www.lechateau.com/style/jump/Bride/category/cat38761590" title="Shop Bridal Dresses">
+              <h2>wedding dresses</h2>
+            </a> for every bride's special day. Explore a variety of styles and silhouettes for your <a href="https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702" title="Shop Bridal Party Dresses">
+              <h2>bridal party</h2>
+            </a> and <a title="Shop Mother of the Bride Dresses" href="https://www.lechateau.com/style/jump/Mother+of+the+Bride/category/cat38761594">
+              <h2>mother of the bride</h2>
+            </a> dresses your mom will love! RSVP yes and dress up in LE CH&Acirc;TEAU gowns and <a href="https://www.lechateau.com/style/jump/Special+Occasion/category/cat44420704" title="Shop Cocktail &amp; Party Dresses">
+              <h2>cocktail</h2>
+            </a> attire for all your events. LE CH&Acirc;TEAU has <a href="https://www.lechateau.com/style/jump/Prom+Dresses/category/cat39920702" title="Shop Prom Dresses">
+              <h2>prom dresses</h2>
+            </a> for any style and <a href="https://www.lechateau.com/style/jump/Jumpsuits/category/cat46100756" title="Shop Dressy Jumpsuits">
+              <h2>jumpsuits</h2>
+            </a> that promise a perfectly pulled-together look.</span></div>
+        <div class="more-content hide"><br><span>LE CH&Acirc;TEAU's Wedding Boutique carries every <a href="https://www.lechateau.com/style/jump/All+Accessories/category/cat38761596" title="Shop Wedding Accessories">
+              <h2>accessory</h2>
+            </a> you need to finish your look. <a href="https://www.lechateau.com/style/jump/All+Shoes/category/cat38761597" title="Shop Wedding Shoes">
+              <h2>Shoes</h2>
+            </a> that dazzle with <a href="https://www.lechateau.com/style/jump/Clutches/category/cat38761602" title="Shop Clutches">
+              <h2>clutches</h2>
+            </a> and bags to match. Get your glam on with sparkling <a href="Shop Jewellery">
+              <h2>jewellery</h2>
+            </a> and <a href="https://www.lechateau.com/style/jump/Hair+Accessories/category/cat38761598" title="Shop Headpieces">
+              <h2>hair accessories</h2>
+            </a>. Need a <a href="https://www.lechateau.com/style/jump/Cover+Ups/category/cat38761600" title="Shop Cover Ups">
+              <h2>cover up</h2>
+            </a> or wrap for your outfit? LE CH&Acirc;TEAU has you covered. Make an <a title="Book Your Wedding Styling Appointment" href="https://www.lechateau.com/style/editorial.jsp?content=ws">
+              <h2>appointment</h2>
+            </a> to visit LE CH&Acirc;TEAU's Wedding Boutique now.</span></div>
+        <p class="containhidden"><br><span class="show" id="show">Read more</span></p>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+  
+  
+  <script>
+    // defer css
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() {
+      window.setTimeout(loadDeferredStyles, 0);
+    });
+    else window.addEventListener('load', loadDeferredStyles);
+    // Polyfill for responsive images
+    function loadJS(u) {
+      var r = document.getElementsByTagName("script")[0],
+        s = document.createElement("script");
+      s.src = u;
+      r.parentNode.insertBefore(s, r);
+    }
+    if (!window.HTMLPictureElement) {
+      document.createElement('picture');
+      loadJS("https://static.lechateau.com/html/landing/templates/new/respimage.min.js");
+    }
+    
+    function checkDevice() {
+      var isiPad = function() {
+        return (navigator.platform.indexOf("iPad") != -1);
+      }
+      var isiPhone = function() {
+        return (
+          //Detect iPhone
+          (navigator.platform.indexOf("iPhone") != -1) ||
+          //Detect iPod
+          (navigator.platform.indexOf("iPod") != -1)
+        );
+      }
+      if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i) || isiPad() || isiPhone()) {
+        return true;
+      }
+      return false;
+    }
+    $(document).ready(function(e) {
+      // check if device
+      try {
+        var checkDev = checkDevice();
+        if (checkDev == true) {
+          $("#mob-silder-wrap").show();
+        }
+      } catch (err) {}
+      $(".dragscroll .slide").click(function() {
+        var n = $(this).data("link");
+        dataLayer.push({
+          "event": "dragballs",
+          "eventAction": n, // name
+          "eventLabel": 'Wedding' // CHANGE PAGE HERE
+        });
+      });
+    });
+    
+  </script>
+  
+  <script>
+    $(document).ready(function(e) {
+      $(".show").on("click", function() {
+        var linkText = $(this).text();
+        if (linkText == "Read more") {
+          $(this).text("Read less");
+          $(".more-content").removeClass("hide");
+        } else {
+          $(this).text("Read more");
+          $(".more-content").addClass("hide");
+        }
+      })
+    })
+    
+  </script>
+  <script>
+    $(document).ready(function(e) {
+      $('#sliderSale').slick({
+        autoplay: true,
+        autoplaySpeed: 4500,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        // appendArrows: '#arrowsTwo > div',
+        appendDots: '#dotsTwo',
+        lazyLoad: 'ondemand',
+        speed: 400,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        draggable: true,
+        swipeToSlide: true,
+        touchMove: true,
+        prevArrow: '<button type="button"  class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        adaptiveHeight: true,
+        responsive: [{
+            breakpoint: 1500,
+            settings: {
+              variableWidth: true,
+              centerMode: true,
+              adaptiveHeight: true,
+              slidesToShow: 1,
+            }
+          },
+          {
+            breakpoint: 1025,
+            settings: {
+              variableWidth: false,
+              centerMode: false,
+              slidesToShow: 1,
+            }
+          }
+        ]
+      });
+    });
+    
+  </script>
+  
+</body>
+
+</html>

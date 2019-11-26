@@ -1,0 +1,93 @@
+/* CSS News Ticker */
+.ticker-wrap {
+  display: block;
+  text-align: center;
+ /* background: black; */
+  color: white;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+
+#ticker {
+  height: 20px;
+  overflow: hidden;
+/*  background: black; */
+  text-align: left;
+  padding: 0;
+}
+
+#ticker * {
+   text-transform: uppercase;
+   color: white;
+   font-size: 13px;  
+   letter-spacing: 2px;
+   font-weight: bold;   
+}
+
+/* mobile font-decrease */
+@media only screen and (max-width: 591px) {
+  #ticker * {
+    font-size: 12px; 
+	letter-spacing: 1px;
+	color: black;
+  }
+}
+
+/* container */
+#ticker ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width:100%;
+  text-align: center;
+   
+}
+
+/* slide */
+#ticker .ticker.slide {
+  height: 20px;
+  white-space: nowrap;
+  font: 'GothamMedium';
+}
+
+#ticker .ticker.inner {
+   display: block;
+   width: 80%;
+   margin: auto;
+   position: relative;
+   line-height: 20px;
+}
+
+#ticker .ticker.inner * {
+  display: inline-block;
+}
+
+#ticker .ticker.thumbnail {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#ticker .ticker.title {
+  margin: 0;
+  color: inherit;
+  font-size: 1em;
+  display: inline-block;
+}
+
+#ticker .ticker.link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: inherit;
+}
+
+#ticker .ticker.meta * {
+  color: inherit;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-left: 3px;
+}

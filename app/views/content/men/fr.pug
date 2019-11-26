@@ -1,0 +1,208 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
+|
+|
+|
+|
+style.
+    /* HERO CSS */
+    @media (min-width: 1300px) {
+    #landingPage > div.row.hero > div.ctas.LP-DESKTOP > a
+    {
+    position: relative;
+    }
+    #landingPage > div.row.hero > div.ctas.LP-DESKTOP
+    {
+    height: 0px;
+    }
+    #landingPage > div.row.hero.new-arrivals > div.ctas.LP-DESKTOP > a {
+    top: 648px;
+    left: 350px;
+    }	
+    }
+    @media (max-width: 1300px) and (min-width: 769px) {
+    #landingPage > div.row.hero > div.ctas.LP-DESKTOP > a
+    {
+    position: absolute;
+    }
+    #landingPage > div.row.hero.new-arrivals > div.ctas.LP-DESKTOP > a {
+    left: 57%;
+    top: 75%;
+    }
+    }
+    @media (max-width: 768px) {
+    .row.margin-0 {
+    margin-top: 60px;
+    margin-top: calc((40/591) * 100%);
+    }
+    }
+|
+|
+|
+|
+
+
+//-START ----------------------
+// ROW - NEW ARIVALS
+.row.row1.hero.new-arrivals
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta("Magasinez les nouveautés pour hommes", 
+		 'https://www.lechateau.com/style/jump/New+Arrivals/category/catmfr20021', 
+		 "seonew")(class="btn-lc secondary margin-00")
+  // image
+  +hero('https://www.lechateau.com/style/jump/New+Arrivals/category/catmfr20021', 
+		  "Magasinez les nouveautés pour hommes",
+		  "En mode party. Des motifs fantaisie aux velours somptueux, nous avons ce qu’il vous faut pour vous démarquer. Nouveautés",
+		  'lechateau-051119-fr-d_2000px_01',
+		  'lechateau-051119-fr-d_01',
+		  'lechateau-051119-fr-m_01',
+		  false)
+// END -  NEW ARIVALS
+//-END--------------------
+
+
+
++youtube
+
+
+
+//-START ----------------------
+// ROW - BLAZERS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta("Magasinez les vestons", 
+		 'https://www.lechateau.com/style/browse/subcategoryBanner.jsp?categoryId=catmfr20029', 
+		 "Magasinez les vestons pour hommes")(class="btn-lc secondary margin-40", style="left:23%; top: 76%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/browse/subcategoryBanner.jsp?categoryId=catmfr20029', 
+		  "Magasinez les vestons pour hommes",
+		  "Vestons festifs. Imprimés branchés et couleurs tendance donneront le ton à toutes vos occasions. Préparez-vous à attirer l’attention. Magasinez les vestons ",
+		  'lechateau-051119-fr-d_05',
+		  'lechateau-051119-fr-m_03')
+// END - BLAZERS
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW - SHIRTS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta("Magasinez les chemises", 
+		 'https://www.lechateau.com/style/jump/Shirts/category/cat38991707', 
+		 "Magasinez les chemises pour hommes")(class="btn-lc regular margin-40", style="left:5.5%; top: 80%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Shirts/category/cat38991707', 
+		  "Magasinez les chemises pour hommes",
+		  "Chemises à l’affiche. Donnez une toute nouvelle vie à votre complet noir classique avec une chemise à motifs accrocheurs. Magasinez les chemises",
+		  'lechateau-051119-fr-d_07', 
+		  'lechateau-051119-fr-m_04')
+// END - SHIRTS
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - COATS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta("Magasinez les manteaux", 
+		 'https://www.lechateau.com/style/jump/Jackets+%26+Coats/category/catmfr20030', 
+		 "Magasinez les manteaux pour hommes")(class="btn-lc regular margin-40", style="left:49%; top: 81%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Jackets+%26+Coats/category/catmfr20030', 
+		  "Magasinez les manteaux pour hommes",
+		  "Vent d’hiver. Nous avons de quoi vous tenir au chaud, peu importe la météo. Magsinez les manteaux ",
+		  'lechateau-051119-fr-d_09', 
+		  'lechateau-051119-fr-m_05')
+// END - COATS
+//-END--------------------
+
+
+
+
+//-START ----------------------
+// ROW - PUFFERS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta("Magasinez", 
+		 'https://www.lechateau.com/style/jump/Down+Filled+Puffer+Bomber+Jacket/productDetail/All+Men/375496/catmfr20021', 
+		 "Magasinez les manteaux matelassés pour hommes")(class="btn-lc secondary margin-40", style="left:42%; top: 78%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Down+Filled+Puffer+Bomber+Jacket/productDetail/All+Men/375496/catmfr20021', 
+		  "Magasinez les manteaux matelassés pour hommes",
+		  "Manteaux matelassé. L'article le plus cool de votre tenue sera aussi le plus chaud. Magasinez",
+		  'lechateau-051119-fr-d_11', 
+		  'lechateau-051119-fr-m_06')
+// END - PUFFERS
+//-END--------------------
+
+
+
+
+//-START ----------------------
+// ROW - SWEATERS
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta("Magasinez les chandails", 
+		 'https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/catmfr20027', 
+		 "Magasinez les chandails pour hommes")(class="btn-lc regular margin-40", style="left:44%; top: 82%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/catmfr20027', 
+		  "Magasinez les chandails pour hommes",
+		  "Tricots confos. C’est la saison des chandails et nous avons les styles qu’il vous faut.  Magasinez les chandails",
+		  'lechateau-051119-fr-d_13', 
+		  'lechateau-051119-fr-m_07')
+// END - SWEATERS
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW - ACCESSORIES
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta("Magasinez les accessoires", 
+		 'https://www.lechateau.com/style/jump/New+Arrivals/category/cat37680825', 
+		 "Magasinez les accessoires pour hommes")(class="btn-lc regular margin-40", style="left:21%; top: 83%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/New+Arrivals/category/cat37680825', 
+		  "Magasinez les accessoires pour hommes",
+		  "Emmitouflez-vous. Avec ces accessoires incontournables, vous n’avez pas à craindre le froid. Magasinez les accessoires ",
+		  'lechateau-051119-fr-d_15', 
+		  'lechateau-051119-fr-m_08')
+// END - ACCESSORIES
+//-END--------------------
+
+
++youtubeScript('tgxqRf1BgBs')

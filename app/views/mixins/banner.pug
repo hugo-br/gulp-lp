@@ -1,0 +1,105 @@
+//-------------------------------------
+//-	REGULAR BANNER
+//-------------------------------------
+mixin banner(title, blur, image, seo='', alt='', catId='', bckColor='#eaeaea')
+  |
+  |
+  | 
+  br
+  br
+  // Categorie =catId
+  |
+  |
+  div(style='width:100%; margin-left:auto; margin-right:auto; line-height:26px; text-align:center; background-color: #b1caee; text-transform: uppercase;')
+    a(style='position:relative; top: 0px; z-index: 2;', href='http://preview.lechateau.com/style/browse/subcategoryBanner.jsp?categoryId='+catId, target='blank', title='')
+      This links to this category : https://www.lechateau.com/style/browse/subcategoryBanner.jsp?categoryId=#{catId}
+  |
+  |
+  // Start BANNER
+  .wrapper(style='background-color:'+bckColor)
+    div
+      .cb-table-custom
+        .cb-table-column-top
+          .cb-text-holder.left(style='')
+            .cb-text-custom
+              h1.text-black.titre-banniere(style='')
+                span=title   
+              .blurb-description(style='')
+                each val in blur
+                  p.category-intro-text
+                    span=val
+                else 
+                 p.category-intro-text 
+                  span=blur[0]
+        img(src='https://lechateau.scene7.com/is/image/LeChateau/'+image+'?$jpeg-full$', alt=alt, title=seo)
+  // END BANNER
+  |
+  |
+  |
+  
+//-------------------------------------
+//-	FLASH SALE BANNER
+//-------------------------------------
+mixin FS(desk, mob, term, lang='en')
+  - var deskPic = desk.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+desk+'?$jpeg-prog$':desk;
+  - var mobPic = mob.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+mob+'?$jpeg-prog$':mob;
+  - var text = lang==='en'?'Outlet Flash Sale':'Solde éclair'
+  - var outImg = lang==='en'?'https://www.lechateau.com/style/html/landing/shops/outlet/images/OUTLET_Logo_black_text_en.png':'https://www.lechateau.com/style/html/landing/shops/outlet/images/OUTLET_Logo_balck_text_fr.png';
+  - var terms = lang==='en'? 'Read the terms for this promotion':'Lire les termes de la promotion';
+  - var file = 'https://www.lechateau.com/style/html/terms/'+ term + '.html';
+  |
+  |
+  |
+  div(style='width:100%; background-color:rgba(147,147,147,1.00); text-align:center; font-size:30px;')
+    strong=lang.toUpperCase()
+  br
+  br
+  .outlet-bar(style='background-color:white; max-width: none;')
+    img.outlet-logo(style='width:500px;', src=outImg, alt='')
+    |
+    |
+  //Start Banner
+  |
+  |  
+  .FS-SHOW-DESKTOP
+    .wrapper(style='text-align:center;background-color:#ffffff;')
+      |	
+      |	  
+      a(title=terms, href='https://www.lechateau.com/style/html/terms/flashsale/0927_dressFlashSale_en.html', target='_blank', onfocus='this.blur()', onclick="NewWindow(this.href,'mywin','320','193','yes','center');return false")
+        img(src=deskPic, alt=text)
+        |
+        |
+      |		
+      |	  
+  .FS-SHOW-MOBILE
+    .wrapper(style='max-width:591px; text-align:center;background-color:#ffffff;')
+      a(title=terms, href=file, target='_blank', onfocus='this.blur()', onclick="NewWindow(this.href,'mywin','320','193','yes','center');return false")
+        img(src=mobPic, alt=text)
+        |
+        |
+      |		
+      |
+	  
+	  
+//-------------------------------------
+//-	PROMO BANNER
+//-------------------------------------
+mixin promo(desk, mob, term, lang='en')
+  - var deskPic = desk.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+desk+'?$jpeg-prog$':desk;
+  - var mobPic = mob.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+mob+'?$jpeg-prog$':mob;
+  - var text = lang==='en'?'Outlet Flash Sale':'Solde éclair'
+  - var outImg = lang==='en'?'https://www.lechateau.com/style/html/landing/shops/outlet/images/OUTLET_Logo_black_text_en.png':'https://www.lechateau.com/style/html/landing/shops/outlet/images/OUTLET_Logo_balck_text_fr.png';
+  - var terms = lang==='en'? 'Read the terms for this promotion':'Lire les termes de la promotion';
+  - var file = 'https://www.lechateau.com/style/html/terms/'+ term + '.html';
+  |
+  |
+  |
+  div(style='max-width:1025px; margin: auto; display: block;')
+  .wrapper.newBanner.copy-name.blocnew.LP-DESKTOP(style='text-align:center; ')
+    .content
+      a(title=terms, href=file, target='_blank', onfocus='this.blur()', onclick="NewWindow(this.href,'mywin','320','193','yes','center'); return false")
+        img(src=deskPic, alt='')
+  .wrapper.newBanner.copy-name.blocnew.LP-DEVICE(style='text-align:center; ')
+    .content
+      a(title=terms, href=file, target='_blank', onfocus='this.blur()', onclick="NewWindow(this.href,'mywin','320','193','yes','center'); return false")
+        img(src=mobPic, alt='')

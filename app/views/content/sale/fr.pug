@@ -1,0 +1,205 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
+|
+|
+|
+|
+//-START ----------------------
+// ROW - TOP BANNER
+.row.row1
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/All+Women/category/cat46020717', 
+			  'Magasinez les soldes', 
+			  "Votre automne, votre solde. Jusqu'a 70% de rabais.", 
+			  'sale-191015-fr-d_01', 
+			  'sale-191015-fr-m_01', false)
+  |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+//-END--------------------
+
+#shoes(style="height:0px")  &#160;
+|
+|
+|
+
+
+
+#dresses(style="height:0px")  &#160;
+|
+|
+|
+//-START ----------------------
+// ROW - DRESSES
+.row
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/All+Women/category/cat46020717', 
+			"Magasinez les vêtements pour femmes en solde", 
+			"Pour femmes. Jusqu’à 70 % de rabais*. Chaussures. 50% sur votre 2e paire**. À partir de 10 $*.  Pour hommes. Jusqu’à 60 % de rabais*", 
+			'sale-191015-fr-d_03', 
+			'sale-191015-fr-m_03',
+			false)
+  |
+  // image-map
+  .image-map
+    +map('https://www.lechateau.com/style/jump/All+Women/category/cat46020717',"Magasinez les vêtements pour femmes en solde")(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/All+Shoes/category/cat260038', "Magasinez les chaussures pour femmes en solde")(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/All+Men/category/cat46020732', "Magasinez les vêtements pour hommes en solde")(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+    |
+    |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+//-END-------------------
+
+//-START ----------------------
+// ROW - BOOTS & SHOES 
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Profitez des aubaines', 
+		 'https://www.lechateau.com/style/jump/50%25+Off+All+Shoes+%26+Boots/category/cat260038', 
+		 "Magasinez la vente")(class="btn-lc regular margin-00", style="left:51%; top: 79%;")
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/50%25+Off+All+Shoes+%26+Boots/category/cat260038', 
+			"Magasinez la vente", 
+			"Magasinez la vente", 
+			'shoe-banner-251119-fr-d_02', 
+			'shoe-banner-251119-fr-m_02',
+			false)
+  |
+  |
+|
+|
+// END - ROW BOOTS & SHOES
+|
+|
+|
+//-END--------------------
+
+//-START ----------------------
+// ROW - SHOES
+.row
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Dresses/category/cat260081', 
+			"Magasinez les robes en solde", 
+			"Hauts à partir de 20$*. Bottes à partir de 50$.  Chandails. À partir de 10 $*. ", 
+			'sale-191015-fr-d_05', 
+			'sale-191009-fr-m_05-v2',
+			false)
+  |
+  // image-map
+  .image-map
+    +map('https://www.lechateau.com/style/jump/Dresses/category/cat260081',"Magasinez les robes en solde")(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/All+Shoes/category/cat260038', "Magasinez les chaussures en solde")(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Tops/category/cat260089', "Magasinez les hauts pour femmes en solde")(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+    |
+    |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - WOMEN
+.row
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Coats+%26+Jackets/category/cat45920711', 
+			"Magasinez les manteaux pour femmes en solde", 
+			"Manteaux à partir de 90$. Pantalons. À partir de 20 $*.  Vestes. À partir de 30 $*. ", 
+			'sale-191015-fr-d_07', 
+			'sale-191015-fr-m_07')
+  |
+  // image-map
+  .image-map
+    +map('https://www.lechateau.com/style/jump/Coats+%26+Jackets/category/cat45920711',"Magasinez les manteaux pour femmes en solde")(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Pants+%26+Skirts/category/cat260085', "Magasinez les pantalons pour femmes en solde")(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/50%25+Off+Blazers+%26+Separates/category/cat260075', "Magasinez les vestes pour femmes en solde")(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+    |
+    |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+//-END--------------------
+
+#men(style="height:0px")  &#160;
+|
+|
+|
+//-START ----------------------
+// ROW - MEN
+.row
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/40%25+Off+Blazers+%26+Separates/category/cat45820741', 
+			"Magasinez les vestons pour hommes en solde", 
+			"Vestons. À partir de 40 $*. Chemises. À partir de 20 $*.  Chandails. À partir de 20 $*.", 
+			'sale-191009-fr-d_09-v3', 
+			'sale-191009-fr-m_09-v3')
+  |
+  // image-map
+  .image-map
+    +map('https://www.lechateau.com/style/jump/Blazers+%26+Vests/category/cat270028',"Magasinez les vestons pour hommes en solde")(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Shirts/category/cat45640702', "Magasinez les chemises pour hommes en solde")(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Tops+%26+Sweaters/category/cat270024', "Magasinez les chandails pour hommes en solde")(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+    |
+    |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+//-END--------------------
+
+
++legal("*Styles sélectionnés.")
+|
+|
+|
+|
+|

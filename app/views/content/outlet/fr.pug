@@ -1,0 +1,131 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+|
+|
+|
+|
+
+//-START ----------------------
+// ROW - MEN
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('VêTEMENTS POUR HOMMES', 
+		 'https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
+		 'Magasinez les vêtements pour hommes')(class="btn-lc secondary margin-00", style="right:61%; top: 84%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
+		  'Magasinez les vêtements pour hommes',
+		  "Du nouveau pour lui. La clé pour faire la transition entre les saisons? La superposition.  Vêtements pour hommes",
+		  'lechateau-091019-fr-d_17', 
+		  'lechateau-091019-fr-m_19')
+  |
+  |
+|
+|
+// END - MEN
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - WEDDING
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Explorez la Boutique mariage', 
+		 'https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
+		 'Explorez la Boutique mariage')(class="btn-lc regular margin-00", style="left:53%; top: 93%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
+		  'Explorez la Boutique mariage',
+		  "La Boutique mariage. Des tenues à faire rêver pour tous les mariages de la saison, peu importe le code vestimentaire. Explorez la Boutique mariage >",
+		  'lechateau-091019-fr-d_19', 
+		  'lechateau-091019-fr-m_21')
+  |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+|
+//- END - ROW WEDDING
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - APPOINTMENT
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('EN SAVOIR PLUS', 
+		 'https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 
+		 'Fixez un rendez-vous de stylisme personnel')(class="btn-lc regular margin-00", style="right:61.5%; top: 89%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 
+		  'Fixez un rendez-vous de stylisme personnel', 
+		  "Voici Votre mode de vie stylée Service de stylisme personnel. Fixez un rendez-vous en magasin avec nos stylistes LE CHÂTEAU.  - Expérience personnalisée  - Jusqu'à 60 minutes de service de stylisme et de conseils mode  - Tenues créées en fonction de votre style personnel ou de l'événement à venir - Salle d'essayage réservée  + recevez un cadeau spécial  *Quantités limitées. En savoir plus>", 
+		  'styling-service-banner-190920-fr-d', 
+		  'styling-service-banner-190920-fr-m')
+  |
+  |
+|
+|
+// END - ROW APPOINTMENT
+|
+|
+|
+|
+//-END--------------------
+
+//-START ----------------------
+// ROW - OUTLET BOTTOM
+.row.LP-DESKTOP
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/SALE/category/cat260028', 
+		  'Magasinez les soldes', 
+		  'Magasinez les soldes', 
+		  'salebanner-home-190906-fr-d', 
+		  '')
+  |
+  // image-map
+  .image-map
+    +map('https://www.lechateau.com/style/jump/SALE/category/cat260028', 'Magasinez les soldes')(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/OUTLET/category/cat37310715', "Magasinez les soldes de l'entrepôt")(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/CLEARANCE/category/cat45930750', 'Magasinez les soldes de liquidation')(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+    |
+    |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+|
+//-END--------------------
+
++legal("*Styles sélectionnés.")

@@ -1,0 +1,473 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
+|
+|
+|
+|
+
+//-START ----------------------
+// ROW - 
+.row.row1
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop bridal dresses', 
+		 'https://www.lechateau.com/style/jump/Bride/category/cat38761590', 
+		 "Shop Bridal Gowns")(class="btn-lc gothamMed underlineCTA white margin-40", style="left:66%; top:54%;")
+    +cta('Explore the lookbook', 
+		 'https://www.lechateau.com/style/editorial.jsp?content=lb2019-wb', 
+		 "Shop Wedding Looks for Women")(class="btn-lc gothamMed underlineCTA white margin-20", style="left:65.5%; top:62%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Bride/category/cat38761590', 
+		  "Shop Bridal Gowns",
+		  "Find the One. Fall head over heels for our most romantic dresses, beautifully made for your big day. Shop bridal dresses ",
+		  'wedding-191009-en-d_01',
+		  'wedding-191009-en-m_01',
+		  false)
+  |
+  |
+|
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - CAROUSEL
+|
+|
+|
+- var slides = [{desk:'https://lechateau.scene7.com/is/image/LeChateau/BRIDAL376946_003__1_469x587.jpg?id=6fEqP1&fmt=jpg&fit=constrain,1&wid=501&hei=627', mob:'https://lechateau.scene7.com/is/image/LeChateau/BRIDAL376946_003__1_469x587.jpg?id=6fEqP1&fmt=jpg&fit=constrain,1&wid=501&hei=627', seo:'Shop Style', link:'https://www.lechateau.com/style/jump/BRIDAL376946_003/productDetail/Bride/BRIDAL376946_003/'}]
++carousel(slides)
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - Bridemaid
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop bridesmaid dresses', 
+		 'https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702', 
+		 "Shop Bridal Gowns")(class="btn-lc regular margin-00", style="left:20%; bottom:3%;")
+    +cta('Shop mother of the bride dresses', 
+		 'https://www.lechateau.com/style/jump/Mother+of+the+Bride/category/cat38761594', 
+		 "Shop Mother of the Bride Dresses")(class="btn-lc regular margin-00", style="left:55%; bottom:3%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702', 
+		  "Shop Bridal Gowns",
+		  "On the bride’s side. Shop bridesmaid dresses",
+		  'wedding-191009-en-d_05',
+		  'wedding-191009-en-m_05',
+		  false)
+  |
+  |
+  .image-map.LP-DESKTOP
+    +map('https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702 ', 'Shop Bridesmaid Dresses')(style="width:50%; height:100%; top:0;left:0; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Mother+of+the+Bride/category/cat38761594', 'Shop Mother of the Bride Dresses')(style="width:50%; height:100%; top:0; left:50%; position:absolute;")  
+|
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+//-START ----------------------
+// ROW - Mother the bride
+.row.LP-DEVICE
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Mother+of+the+Bride/category/cat38761594', 
+		  "Shop Mother of the Bride Dresses",
+		  "Shop mother of the bride dresses",
+		  'wedding-191009-en-m_06',
+		  'wedding-191009-en-m_06')
+|
+|
+// END - Mother the bride
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW - EMAIL CHARLOTTE
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Email Charlotte', 
+		 'mailto:charlotte@lechateau.com', 
+		 "Ask Charlotte, Our Wedding Stylist")(class="btn-lc gothamMed underlineCTA margin-00", style="left:36%; bottom:11%;")
+    +cta('Schedule a 1-on-1', 
+		 'https://www.lechateau.com/style/editorial.jsp?content=ws', 
+		 "Book Your Wedding Styling Appointment")(class="btn-lc gothamMed underlineCTA margin-00", style="left:51%; bottom:11%;")
+  |
+  |
+  +bckImg('https://www.lechateau.com/style/jump/Bridal+Party/category/cat44420702', 
+		  "Shop Bridal Gowns",
+		  "We'd love to help you! Email our expert stylist, Charlotte, with your questions about personal style or fit. She can help you find the perfect dress and shoes for any occasion. For a personalised one-on-one, schedule an appointment with our stylists. Email Charlotte",
+		  'wedding-191009-en-d_07-v2',
+		  'wedding-191009-en-m_08')
+  |
+  |
+  .image-map.LP-DESKTOP
+    +map('mailto:charlotte@lechateau.com', 'Ask Charlotte, Our Wedding Stylist')(style="width:50%; height:100%; top:0;left:0; position:absolute;")
+    +map('https://www.lechateau.com/style/editorial.jsp?content=ws', 'Book Your Wedding Styling Appointment')(style="width:50%; height:100%; top:0; left:50%; position:absolute;")  
+|
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - Occassion Dresses
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop all occasion dresses', 
+		 'https://www.lechateau.com/style/jump/Special+Occasion/category/cat44420704 ', 
+		 "Ask Charlotte, Our Wedding Stylist")(class="btn-lc regular margin-40", style="left:22%; top:69%;")
+  |
+  |
+  +bckImg('https://www.lechateau.com/style/jump/Special+Occasion/category/cat44420704', 
+		  "Shop Special Occasion Dresses",
+		  "RSVP in Style. Still got weddings and events to plan for? We’ve got you covered. Shop all occasion dresses",
+		  'wedding-191009-en-d_09',
+		  'wedding-191009-en-m_10')
+  |
+  |
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - Cocktail
+.row.margin-00.mob-20
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop cocktail dresses', 
+		 'https://www.lechateau.com/style/jump/Cocktail+%26+Party/category/cat44420705', 
+		 "Shop Cocktail Dresses")(class="btn-lc regular margin-40", style="left:54%; top:77%;")
+  |
+  |
+  +bckImg('https://www.lechateau.com/style/jump/Cocktail+%26+Party/category/cat44420705', 
+		  "Shop Cocktail Dresses",
+		  "Cocktail (Dress) Time! Party-perfect dresses that’ll make an impression. Shop cocktail dresses",
+		  'wedding-191009-en-d_10',
+		  'wedding-191009-en-m_12')
+  |
+  |
+|
+// END - Cocktail
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW - Evening Dresses
+.row.margin-00.mob-20
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop evening dresses', 
+		 'https://www.lechateau.com/style/jump/Black+Tie/category/cat44430702', 
+		 "Shop Evening Dresses")(class="btn-lc regular margin-40", style="left:23%; bottom:2%;")
+  |
+  |
+  +bckImg('https://www.lechateau.com/style/jump/Black+Tie/category/cat44430702', 
+		  "Shop Evening Dresses",
+		  "Evening Standard.Make a grand entrance in a statement style. Shop evening dresses",
+		  'wedding-191009-en-d_11',
+		  'wedding-191009-en-m_14')
+  |
+  |
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - SHOES
+.row.margin-00.mob-20
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop shoes', 
+		 'https://www.lechateau.com/style/jump/All+Shoes/category/cat38761597', 
+		 "Shop Wedding Shoes")(class="btn-lc regular margin-40", style="left:60%; top:54%;")
+  |
+  |
+  +bckImg('https://www.lechateau.com/style/jump/All+Shoes/category/cat38761597', 
+		  "Shop Wedding Shoes",
+		  "Party Heels. Hit the dance floor, there’s a pair for every occasion. Shop shoes",
+		  'wedding-191009-en-d_13',
+		  'wedding-191009-en-m_16')
+  |
+  |
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - Accessories
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop accessories', 
+		 'https://www.lechateau.com/style/jump/All+Accessories/category/cat38761596', 
+		 "Shop Wedding Accessories")(class="btn-lc regular margin-40", style="left:77%; top:64%;")
+  |
+  |
+  +bckImg('https://www.lechateau.com/style/jump/All+Accessories/category/cat38761596', 
+		  "Shop Wedding Accessories",
+		  "All about the Extras. Add that perfect finishing touch with pretty extras. Shop accessories",
+		  'wedding-191009-en-d_15',
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/Wedding%20boutique/wedding-191009-en-m_17-v2.gif')
+  |
+  |
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW - Intimates
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop intimates', 
+		 'https://www.lechateau.com/style/jump/Intimates/category/cat38951136', 
+		 "Shop Wedding Intimates")(class="btn-lc regular margin-40", style="left:16%; top:59%;")
+  |
+  |
+  +bckImg('https://www.lechateau.com/style/jump/Intimates/category/cat38951136', 
+		  "Shop Wedding Intimates",
+		  "Underneath it All. Flattering pieces that help a stunning dress look its best. Shop intimates ",
+		  'wedding-191009-en-d_17',
+		  'wedding-191009-en-m_19')
+  |
+  |
+|
+// END - 
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+
+
+
+//-START ----------------------
+// ROW - APPOINTMENT ROW
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta("SHOP ALL SUITS",
+		 'https://www.lechateau.com/style/jump/Suits/category/cat38761603', 
+		 "Shop all suits")(class="btn-lc secondary margin-00", style="left:65%; top: 49%; width: 20%;")
+    +cta('BOOK THE GROOM ROOM',
+		 'https://www.lechateau.com/style/editorial.jsp?content=ws', 
+		 'Book Your Styling Appointment')(class="btn-lc secondary margin-00", style="left:65%; top: 73%; width: 20%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Suits/category/cat38761603', 
+		  'Shop all suits',
+		  "Shop all suits",
+		  'wedding-190923-en-d_17', 
+		  'wedding-190923-en-m_23')
+  |
+  |
+  .image-map.LP-DESKTOP
+    +map('https://www.lechateau.com/style/jump/Suits/category/cat38761603',
+		  "Shop all suits")(style="left:0; top:0; height:60%; width:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/editorial.jsp?content=ws',
+		  "Book Your Styling Appointment")(style="left:0%; top:60%; height:40%; width:100%; position:absolute;")
+|
+|
+// END - 
+|
+|
+|
+|
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - MEN BOTTOM
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Shop Blazers',
+		 'https://www.lechateau.com/style/jump/Blazers/category/cat38761604', 
+		 'Explore The Wedding Boutique')(class="btn-lc regular margin-00", style="left:10%; bottom: 10%;")
+    +cta('Shop Shirts',
+		 'https://www.lechateau.com/style/jump/Dress+Shirts/category/cat38901007', 
+		 'Explore The Wedding Boutique')(class="btn-lc regular margin-00", style="left:43%; bottom: 10%;")
+    +cta('Shop Cufflinks',
+		 'https://www.lechateau.com/style/browse/subcategoryBanner.jsp?categoryId=cat38901009', 
+		 'Explore The Wedding Boutique')(class="btn-lc regular margin-00", style="left:78%; bottom: 10%;")
+  |
+  |
+  +bckImg('https://www.lechateau.com/style/jump/Blazers/category/cat38761604', 
+		  'Shop Blazers',
+		  "x",
+		  'wedding-190923-en-d_18', 
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/Wedding%20boutique/wedding-190923-fr-m_27.gif')
+  |
+  | 
+  .image-map.LP-DESKTOP
+    +map('https://www.lechateau.com/style/jump/Blazers/category/cat38761604',
+		  'Shop Blazers')(style="left:0; top:0; height:100%; width:33.33%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/Dress+Shirts/category/cat38901007',
+		  'Shop Shirts')(style="left:33.33%; top:0; height:100%; width:33.33%; position:absolute;")
+    +map('https://www.lechateau.com/style/browse/subcategoryBanner.jsp?categoryId=cat38901009', 
+		  'Shop Accessories')(style="left:66.66%; top:0; height:100%; width:33.33%; position:absolute;")
+|
+|
+// END - 
+|
+|
+|
+|
+//-END--------------------
+|
+|
+|
+
+
+
+
+
+
+//-START ----------------------
+// ROW - MEN BOTTOM
+.row.LP-DEVICE.margin-00
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Blazers/category/cat38761604', 
+		  'Shop Blazers',
+		  "",
+		  'wedding-190923-en-m_28', 
+		  'wedding-190923-en-m_28')
+  |
+  |
+// END - 
+|
+|
+|
+|
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - MEN BOTTOM
+.row.LP-DEVICE.margin-00
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Blazers/category/cat38761604', 
+		  'Shop Blazers',
+		  "",
+		  'wedding-190923-en-m_29', 
+		  'wedding-190923-en-m_29')
+  |
+  |
+// END - 
+|
+|
+|
+|
+//-END--------------------
+|
+|
+|
+//-START ----------------------
+// ROW - MEN BOTTOM
+.row.LP-DEVICE.margin-00
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Blazers/category/cat38761604', 
+		  'Shop Blazers',
+		  "",
+		  'wedding-190923-en-m_30', 
+		  'wedding-190923-en-m_30')
+  |
+  |
+// END - 
+|
+|
+|
+|
+//-END--------------------

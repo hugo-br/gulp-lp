@@ -1,0 +1,35 @@
+script.
+    //hide all the section in the page
+    $(".outletPage .sectionLp").hide();
+    //Look if there is a not referenced id in the url or there is flashsale or if there is not 2 boundary
+    if (document.location.href.split("#")[1] == undefined || $(".sectionLp").data("section") == "flashsale" || document.location.href.split('?')[1] == undefined) {
+    //if true show all content and add margin to the section(because there is no margin)
+    $(".outletPage .sectionLp").show();
+    //				$(".sectionLp").each(function() { // if ($(this).index() >= 1) { // $(this).css("margin-top","calc( (60 / 1300) * 100% )"); // } // })
+    }
+    //if there is more than one boundary(which is the case for shoes loop the url parts and show the section aprt corresponding to the first boundary referenced in the url)
+    if (document.location.href.split('?')[1] !== undefined) {
+    var keyval = document.location.href.split('?')[1].split('&');
+    var parts = [];
+    for (var x = 0, y = keyval.length; x < y; x += 1) {
+    parts.push(keyval[x].split('=')[1]);
+    }
+    //				console.log(parts[0]);
+    $(".sectionLp").each(function() {
+    sectionPage = $(this).data("section");
+    //if the id in the url correspond to the name of the section show it
+    if (sectionPage == parts[0]) {
+    $(this).show();
+    }
+    })
+    }
+    //if there is any id referenced in the url show the appropriate section
+    if (document.location.href.split("#")[1] !== undefined) {
+    $(".sectionLp").each(function() {
+    sectionPage = $(this).data("section");
+    //if the id in the url correspond to the name of the section show it
+    if (sectionPage == document.location.href.split("#")[1]) {
+    $(this).show();
+    }
+    })
+    }

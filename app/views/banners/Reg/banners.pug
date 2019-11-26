@@ -1,0 +1,27 @@
+include ../../mixins/banner
+//- banner(title, blur, image, seo, alt, catId, bckColor )
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(content='True', name='HandheldFriendly')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/landing/assets/css/main.css')
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/assets/fonts/MyFontsWebfontsKit.css')
+    |
+    |
+    // COPY ONLY THIS CSS FOR BCC
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/landing/assets/css/lc-category-banners-V3.css')
+    |
+    |
+    //- Banner CSS
+    include ../../style/banner
+  |
+  |
+  |
+  body
+    div(style='max-width:1025px;')
+      +banner('Flattering INTIMATES', ['The pieces that make a stunning dress look its best.'], 'intimates-191004-en', '', '', 'CAT45060707')
+      +banner('Flex Shoes', ['100% genuine leather', 'Superior cushioning', 'Traction-friendly soles', '24/7 comfort'], 'shoes-all-shoes-190912-en')

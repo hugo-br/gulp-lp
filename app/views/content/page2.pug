@@ -1,0 +1,109 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
+|
+|
+|
+|
+// ROW HERO
+.row.row1.hero
+  .ctas.LP-DESKTOP
+    +cta('SHOP NOW', '/TEXT', 'seo')(class="btn-lc secondary margin-40", style="left:40%; top: 62%;")
+  |
+  +hero('cat', 'SEO', 'This is the alternative text', 'shoes-190919-en-d-2000_01', 'lechateau-091019-en-d_03', 'lechateau-091019-en-m_04', false)
+|
+|
+// END - ROW 
+|
+|
+|
+// ROW TEMPLATE - START
+.row.row2
+  //cta
+  .ctas.LP-DESKTOP
+    +cta('SHOP NOW', '/TEXT', 'seo')(class="btn-lc secondary margin-00", style="left:25%; top: 3%;")
+    |
+    |
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Women/category/catwfr10001', 'Shop Everything', 'rhis is the alt text', 'lechateau-091019-en-d_03', 'lechateau-091019-en-m_04')
+  |
+  // image-map
+  .image-map
+    +map('/test1', 'one')(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('/test2', 'two')(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('/test3', 'three')(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+    |
+    |
+  |
+|
+|
+// END - ROW 
+|
+|
+|
+|
+// ROW
+.row.row2
+  .ctas.LP-DESKTOP
+    +cta('SHOP NOW', '/TEXT', 'seo')(class="btn-lc secondary margin-00", style="left:20%; top: 3%;")
+    +cta('SHOP NOW', '/TEXT', 'seo')(class="btn-lc secondary margin-00", style="left:2%; top: 30%;")
+    +cta('SHOP NOW', '/TEXT', 'seo')(class="btn-lc secondary margin-00", style="left:60%; top: 80%;")
+    +shopIcon('/test')(style="left:10%; top:10%;")
+    +shopIcon('/test')(style="left:5%; top:40%;")
+    +shopIcon('/test')(style="left:40%; top:20%;")
+    +shopIcon('/test')(style="left:50%; top:60%;")
+    |
+    |
+  |
+  |
+  |
+  // image
+  +bckImg('cat', 'SEO', 'alt', 'lechateau-091019-en-d_03', 'lechateau-091019-en-m_04')
+  .image-map
+    +map('/test1', 'one')(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('/test2', 'two')(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('/test3', 'three')(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+|
+|
+|
+- var slides = [{desk:'desk', mob:'mob', seo:'seo', link:'link'}, {desk:'desk', mob:'mob', seo:'seo', link:'link'}, {desk:'desk', mob:'mob', seo:'seo', link:'link'}, {desk:'desk', mob:'mob', seo:'seo', link:'link'}]
++carousel(slides)
++legal('*Select Styles.')
+|
+|
+|
++youtube
++youtubeScript('CAa0ahhnHL8')
+|
+|
+|
+//- INSTAGRAM (img,link)
+-var insta = [['instagram-190925-01?$jpeg-prog$','https://www.lechateau.com/style/jump/INSTAG375984_446/productDetail/Social+Looks/INSTAG375984_446/cat46700705'], ['instagram-190925-02?$jpeg-prog$','https://www.lechateau.com/style/jump/INSTAG375984_446/productDetail/Social+Looks/INSTAG375984_446/cat46700705'],['instagram-190925-03?$jpeg-prog$','https://www.lechateau.com/style/jump/INSTAG375984_446/productDetail/Social+Looks/INSTAG375984_446/cat46700705'],['instagram-190925-05?$jpeg-prog$','https://www.lechateau.com/style/jump/INSTAG375984_446/productDetail/Social+Looks/INSTAG375984_446/cat46700705']]
+
+
++instagram(insta, 'fr')

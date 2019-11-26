@@ -1,0 +1,309 @@
+//------------------------------------------------  
+//- CTA
+//------------------------------------------------  
+mixin cta(text, href, seo)
+  |
+  |
+  a(href=href, title=seo)&attributes(attributes)=text
+  |
+
+
+//------------------------------------------------  
+//- Background-image
+//------------------------------------------------  
+mixin bckImg(link, seo, alt, desk, mob, lazyload=true)
+  - var deskPic = desk.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+desk+'?$jpeg-prog$':desk;
+  - var mobPic = mob.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+mob+'?$jpeg-prog$':mob;
+  - var lazy = lazyload;
+  
+  div.image-bckg
+    |
+    |
+    a(href=link, title=seo)
+      picture
+        // [if IE 9]><audio><![endif]
+        |
+        |
+        // Mobile
+        if lazy
+          source(media='(max-width: 768px)', data-srcset=mobPic)
+        else
+          source(media='(max-width: 768px)', srcset=mobPic)
+        |
+        |
+        // Desktop
+        if lazy
+          source(media='(min-width: 768px)', data-srcset=deskPic)
+        else
+          source(media='(min-width: 768px)', srcset=deskPic)
+        //[if IE 9]></audio><![endif]
+        |
+        |
+        if lazy
+          img.lazyload(src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', alt=alt, decoding='async')
+        else
+          img(src=mobPic, alt=alt, decoding='async')
+        |
+        |
+    |
+    |
+  |
+  |
+
+
+//------------------------------------------------  
+//- HERO image  
+//------------------------------------------------  
+mixin hero(link, seo, alt, hero, desk, mob, lazyload=true)
+  -var lazy = lazyload;
+  - deskPic = desk.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+desk+'?$jpeg-prog$':desk;
+  - mobPic = mob.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+mob+'?$jpeg-prog$':mob; 
+  - HeroPic = hero.indexOf(".gif") == -1 ?'https://lechateau.scene7.com/is/image/LeChateau/'+hero+'?$jpeg-prog$':hero; 
+  div.image-bckg
+    |
+    |
+    a(href=link, title=seo)
+      picture
+        // [if IE 9]><audio><![endif]
+        |
+        |
+        // Mobile
+        if lazy
+          source(media='(max-width: 768px)', data-srcset=mobPic)
+        else
+          source(media='(max-width: 768px)', srcset=mobPic)
+        |
+        |
+        // Desktop
+        if lazy
+          source(media='(max-width: 1300px)', data-srcset=deskPic)
+        else
+          source(media='(max-width: 1300px)', srcset=deskPic)
+        //[if IE 9]></audio><![endif]
+        |
+        |
+        // Hero
+        if lazy
+          source(media='(min-width: 1300px)', data-srcset=HeroPic)
+        else
+          source(media='(min-width: 1300px)', srcset=HeroPic)
+        //[if IE 9]></audio><![endif]
+        |
+        |        
+        if lazy
+          img.lazyload(src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', alt=alt, decoding='async')
+        else
+          img(src=mobPic, alt=alt, decoding='async')
+        |
+        |
+    |
+    |
+  |
+
+
+//------------------------------------------------  
+//- IMAGE-MAP
+//------------------------------------------------  
+mixin map(link, seo)
+  |
+  |
+  a(href=link,title=seo)&attributes(attributes) &nbsp;
+  |
+
+
+//------------------------------------------------  
+//- DRAGBALLS
+//------------------------------------------------ 
+mixin dragball(href, pic, cat)
+  .slide(data-link=cat)
+    a(href=href)
+      img(src='https://lechateau.scene7.com/is/image/LeChateau/'+pic+'?$jpeg-prog$', alt=cat)
+
+
+//------------------------------------------------  
+//- LEGAL
+//------------------------------------------------   
+mixin legal(text)
+  .row.margin-20.stay=text
+  
+  
+//------------------------------------------------  
+//- YOUTUBE
+//------------------------------------------------  
+mixin youtube
+  // Youtube
+  .row.spec.margin-20.stay(style='max-width: 1300px;width:100%;')
+    .iframe-container(style='max-width: 1300px;margin:0 auto;')
+      #muteYouTubeVideoPlayer
+  // Youtube
+
+
+mixin youtubeScript(id)
+  script(async='', src='https://www.youtube.com/iframe_api')
+  script.
+    function onYouTubeIframeAPIReady() {
+    var player;
+    player = new YT.Player('muteYouTubeVideoPlayer', {
+    videoId: '#{id}', // YouTube Video ID
+    width: 1300, // Player width (in px)
+    height: 730, // Player height (in px)
+    playerVars: {
+    autoplay: 1, // Auto-play the video on load
+    controls: 1, // Show pause/play buttons in player
+    showinfo: 0, // Hide the video title
+    modestbranding: 1, // Hide the Youtube Logo
+    listType: 'playlist',
+    list: 'PLetudaJ8UG8zscGg4XxLEBuqD_UxKeaYK',
+    loop: 1, // Run the video in a loop
+    fs: 0, // Hide the full screen button
+    cc_load_policty: 0, // Hide closed captions
+    iv_load_policy: 3, // Hide the Video Annotations
+    autohide: 0 // Hide video controls when playing
+    },
+    events: {
+    onReady: function(e) {
+    if ($(window).width() > 1024) {
+    e.target.mute();
+    }
+    }
+    }
+    });
+    }
+    
+//------------------------------------------------    
+//- INSTAGRAM 
+//------------------------------------------------   
+mixin instagram(arr, lang='en')
+  |
+  |
+  // INSTAGRAM - START
+  |
+  |
+  - title = lang==='en'?'Follow LE CHÂTEAU on Instagram':'Suivez LE CHÂTEAU sur instagram';
+  - altext = lang==='en'?"Shop Women's New Arrivals":'Magasinez les nouveautés pour femmes';
+  - cta = lang==='en'?'SHOP IT':'MAGASINEZ';
+  - desktopCTA = lang==='en'?'FOLLOW US ON Instagram':'SUIVEZ-NOUS SUR INSTAGRAM';
+  .row
+    .image-bckg
+      if lang=='en' 
+        a(href='https://www.instagram.com/lechateau/', target='_blank', title='Follow LE CHÂTEAU on Instagram')
+          picture
+            // [if IE 9]><audio><![endif]
+            // Mobile
+            source(media='(max-width: 768px)', data-srcset='https://lechateau.scene7.com/is/image/LeChateau/lechateau-190729-en-m_17?$jpeg-prog$')
+            // Desktop
+            source(media='(min-width: 768px)', data-srcset='https://lechateau.scene7.com/is/image/LeChateau/lechateau-190719-en-d_insta?$jpeg-prog$')
+            //[if IE 9]></audio><![endif]
+            img.lazyload(src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', alt='Follow LE CHÂTEAU on Instagram', decoding='async')
+      else 
+        a(href='https://www.instagram.com/lechateau/', target='_blank', title='Suivez LE CHÂTEAU sur instagram')
+          picture
+            // [if IE 9]><audio><![endif]
+            // Mobile
+            source(media='(max-width: 768px)', data-srcset='https://lechateau.scene7.com/is/image/LeChateau/lechateau-190729-fr-m_17?$jpeg-prog$')
+            // Desktop
+            source(media='(min-width: 768px)', data-srcset='https://lechateau.scene7.com/is/image/LeChateau/lechateau-190719-fr-d_insta?$jpeg-prog$')
+            //[if IE 9]></audio><![endif]
+            img.lazyload(src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', alt='Suivez LE CHÂTEAU sur instagram', decoding='async')
+  |
+  |
+  .row.flex.LP-DESKTOP.instarow.margin-40.stay
+     each val, index in arr
+        |
+        |
+        |
+        // Slice
+        .hover
+          .hoverinsta
+            .hovercontent
+              .hovermiddleverticalAlign
+                ul.instabar
+                  li
+                    a.in(href='', target='_blank', title='Instagram') &nbsp;
+                a.btn-lc.regular.margin-00(href=val[1], target='_top', title=altext, style='left:36%; top: 60%;')
+                  |#{cta}
+          |
+          |
+          a(target='_blank', href=val[1], title=title)
+            img.lazyload(data-src='https://lechateau.scene7.com/is/image/LeChateau/'+val[0]+'?$jpeg-prog$', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', alt=altext)        
+  |
+  |
+  |
+  // MOBILE
+  |
+  |
+  .row.LP-DESKTOP.margin-20
+    a(class="btn-lc regular" href="https://www.instagram.com/lechateau/" target="_blank" title=title)=desktopCTA 
+  .row.LP-DEVICE#mob-silder-wrap2(style="position:relative;")
+    .mob-slider.dragscroll.mob-slider2
+      each val, index in arr
+        .slide
+          a(href=val[1], target='_top', title=altext)
+            img(src='https://lechateau.scene7.com/is/image/LeChateau/'+val[0]+'?$jpeg-prog$', alt=title)
+  |
+  |  
+  .row.LP-DEVICE
+    .image-bckg
+        a(target="_blank" href="https://www.instagram.com/lechateau/" title=title)
+  |
+  |
+  // END - INSTAGRAM
+    
+    
+//------------------------------------------------  
+//- SHOP THE LOOK
+//------------------------------------------------  
+mixin shopIcon(href, lang='en')
+  -seo = lang === 'en' ? 'Shop this style' : 'Magasinez ce style';
+  |
+  |
+  |
+  // SHOP STYLE
+  .shop-icon&attributes(attributes)
+    .btn-pulse
+      |
+      |
+      span.ring
+      |
+      |
+      span.circle
+      |
+      |
+    |
+    |
+    a(target='_blank', href=href, title=seo)
+      |
+      |
+      img.plus-sign(src='https://static.lechateau.com/html/landing/images/shop-icon-black.svg')
+      |
+      |
+  |
+  
+  
+//------------------------------------------------  
+//- CAROUSEL
+//------------------------------------------------  
+mixin carousel(arr)
+  #sliderTwo.row.hero
+    #sliderSale.slider-res
+      each val, index in arr
+        -var desk = 'https://lechateau.scene7.com/is/image/LeChateau/'+val.desk+'?$jpeg-prog$';
+        -var mob = 'https://lechateau.scene7.com/is/image/LeChateau/'+val.mob+'?$jpeg-prog$';
+        div
+          a(href=val.link, title=val.seo, target='_blank')
+            picture
+              // [if IE 9]><audio><![endif]
+              // Mobile
+              source(media='(max-width: 768px)', srcset=mob)
+              |
+              |                
+              // Desktop
+              source(media='(min-width:  768px)', srcset=desk)
+              |
+              |              
+              // [if IE 9]></audio><![endif]
+              |
+              |
+              img(src=mob, alt=val.seo, decoding='async')
+            |
+            |              

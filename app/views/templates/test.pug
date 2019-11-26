@@ -1,0 +1,43 @@
+mixin modal(title='Default')
+  .modal
+      h2.title=title
+      .content
+        block
+		
+mixin list(id, ...items)
+  ul(id=id)
+    each item in items
+      li= item
+	  
+mixin cta(nom, link)
+  a(href=link) nom
+
+mixin row(alt, items)
+  div(class="row")
+    each val, index in items
+      +cta(index, val)
+        
+mixin header_block(title, link)  
+ header
+   h3.main-title #{title}
+   ul
+       li
+            a(href='#{link}', target="_blank")        
+		
+// image
+img(src='image.png', alt='test')
+
+// modal
+.modal-list
+  +modal('A paragraph')
+    p A paragraph
+	
+  +modal('A list')
+    ul
+      li test
+      li Second element
+
+
+  +row('my-list', {1:'test', 2:'test', 3:'test', 4:'test'}) 
+
+  +header_block('Amazing title here!', 'features.html')

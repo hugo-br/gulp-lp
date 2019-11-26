@@ -1,0 +1,13 @@
+.card {
+
+}
+
+.card__{
+  &title {
+    text-transform: uppercase;
+  }
+  
+  &blur {
+    color:red;
+  }
+}

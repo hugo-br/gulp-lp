@@ -1,0 +1,165 @@
+//- button classes : regular(black), secondary(white), gothamMed underlineCTA (black underline)
+//- Gif picture use complete path : https://lechateau.scene7.com/is/content/LeChateau/landing/shops/home/lechateau-180422-en-d_13.gif
+//- Mixins: 
+//-   +hero(link, seo, alt-text, hero-img, desktop-img, mobile-img, lazyload=true)
+//-   +bckImg(link, seo, alt-text, desktop image, mob image, lazyload=true)
+//-   +cta(text, href, seo) //for ctas within .ctas
+//-   +map(link, seo) //for image-map within .image-map
+//-   +youtube() need to add +youtubeScript('videoId') at end of the page
+//-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
+//-
+//- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
+|
+|
+|
+|
+
+//-START ----------------------
+// ROW - MEN
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('BUY MENSWEAR', 
+		 'https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
+		 "Shop Men's Clothing")(class="btn-lc secondary margin-00", style="right:61%; top: 84%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
+		  "Shop Men's Clothing",
+		  "New for Men. Layering is key to managing the shift between seasons.  Shop menswear",
+		  'lechateau-091019-en-d_17',
+		  'lechateau-091019-en-m_19')
+  |
+  |
+|
+|
+// END - MEN
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - MEN
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('SHOP ROW 2', 
+		 'https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
+		 "Shop Men's Clothing")(class="btn-lc secondary margin-00", style="right:61%; top: 84%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
+		  "Shop Men's Clothing",
+		  "New for Men. Layering is key to managing the shift between seasons.  Shop menswear",
+		  'lechateau-091019-en-d_17',
+		  'lechateau-091019-en-m_19')
+  |
+  |
+|
+|
+// END - MEN
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - WEDDING
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('Explore The Wedding Boutique', 
+		 'https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
+		 'Explore The Wedding Boutique')(class="btn-lc regular margin-00", style="left:53%; top: 93%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
+		  'Explore The Wedding Boutique',
+		  "The Wedding Boutique. Dreamy styles for every wedding this season, no matter the dress code. Explore the wedding boutique >",
+		  'lechateau-091019-en-d_19', 
+		  'lechateau-091019-en-m_21')
+  |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+|
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - APPOINTMENT
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('LEARN MORE', 'https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 'Book a Personal Styling Appointment')(class="btn-lc regular margin-00", style="right:61.5%; top: 83%;")
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 'Fixez un rendez-vous de stylisme personnel', "Introducing Your Life Styled Personal Styling Service. Book an in-store appointment with our LE CHÂTEAU stylists. - One-on-one personalized experience - Up to 60mins of expert styling & fashion advice - Looks tailored to your personal style/upcoming event -Reserved changing room + Receive a special gift  *Limited quantities. Learn more >", 'styling-service-banner-190920-en-d', 'styling-service-banner-190920-en-m')
+  |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+|
+//-END--------------------
+
+
+//-START ----------------------
+// ROW - OUTLET BOTTOM
+.row.LP-DESKTOP
+  |
+  |
+  // image
+  +bckImg('', 'Shop Dresses on Sale', 'Shop Dresses on Sale', 'salebanner-home-190906-en-d', '')
+  |
+  // image-map
+  .image-map
+    +map('https://www.lechateau.com/style/jump/SALE/category/cat260028', 'Shop Sale')(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/OUTLET/category/cat37310715', 'Shop the Outlet Store')(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
+    +map('https://www.lechateau.com/style/jump/CLEARANCE/category/cat45930750', 'Shop Clearance')(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
+    |
+    |
+  |
+|
+|
+// END - ROW
+|
+|
+|
+//-END--------------------
+
+
++legal("*Select styles, prices as marked.")

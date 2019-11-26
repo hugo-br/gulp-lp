@@ -1,0 +1,35 @@
+include ../../mixins/banner
+//- promo(desktop image, mob image, term, lang='en')
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(content='True', name='HandheldFriendly')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/landing/assets/css/main.css')
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/assets/fonts/MyFontsWebfontsKit.css')
+    |
+    |
+    // COPY ONLY THIS CSS FOR BCC
+    link(rel='stylesheet', type='text/css', href='https://www.lechateau.com/style/html/landing/assets/css/lc-category-banners-sale-V17.css')
+    |
+    |
+    //- Banner CSS
+    include ../../style/promo-banner
+  |
+  |
+  |
+  body
+    div(style='max-width:1025px;')
+      +promo('catbanner-suits-banner-191011-en-d', 'catbanner-suits-banner-191011-en-m', '1011_suit_en')
+      +promo('catbanner-suits-banner-191011-fr-d', 'catbanner-suits-banner-191011-fr-m', '1011_suit_fr', 'fr')
+      |
+      |
+  |
+  |
+  |
+  | 
+  // promo script  
+  include ../../js/details

@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Landing Page</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta content="True" name="HandheldFriendly">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=5">
+  <meta name="nosnippets">
+  <meta name="theme-color" content="#85031b">
+  <meta name="description" content="Landing Page">
+  
+  
+  
+  <!-- !!! DO NOT INCLUDE IN BCC !!!-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  
+  <!-- !!! DO NOT INCLUDE IN BCC !!!-->
+  
+  
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+    
+  </script>
+  
+  
+  <script src="https://static.lechateau.com/html/landing/templates/new/picturefill.min.js" async=""></script>
+  
+  
+  <style>
+    /* for fullpage on landing page */
+    .listing .wrapper:not(.top) {
+      padding: 0px !important;
+    }
+    
+    .sub-header-black {
+      display: none;
+    }
+    
+    #content>div.wrapper {
+      width: 100%;
+      max-width: 2000px;
+    }
+    
+    #content>.wrapper>.sidebar {
+      display: none;
+    }
+    
+    #content.landing .top .breadcrumbs,
+    #content.listing .top .breadcrumbs {
+      display: none;
+    }
+    
+    @media (max-width: 767px) {
+
+      .categoryBanner,
+      #catBanner {
+        display: block;
+      }
+    }
+    
+    /* Break points */
+    @media (min-width: 769px) {
+      .LP-DESKTOP {
+        display: block;
+      }
+      
+      .LP-DEVICE {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .LP-DEVICE {
+        display: block;
+      }
+      
+      .LP-DESKTOP {
+        display: none;
+      }
+    }
+    
+    /* END Break points */
+    .row,
+    #landingPage {
+      max-width: 2000px;
+      margin: auto;
+    }
+    
+    .row {
+      position: relative;
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+      max-width: 1300px;
+      text-align: center;
+    }
+    
+    .row.hero {
+      max-width: 2000px;
+    }
+    
+    .row .image-bckg {
+      display: block;
+      margin: auto;
+      box-sizing: border-box;
+      position: relative;
+      margin-top: 0px;
+      width: 100%;
+    }
+    
+    .row .image-bckg img {
+      display: block;
+      margin: auto;
+    }
+    
+    .row .text-wrap {
+      text-align: center;
+    }
+    
+    .row .text-over {
+      display: block;
+      width: 100%;
+      max-width: 591px;
+      position: relative;
+    }
+    
+    .row .ctas>a {
+      z-index: 4;
+    }
+    
+    .row .half {
+      width: 100%;
+      display: block;
+    }
+    
+    /*   MARGINS   */
+    @media (min-width: 769px) {
+      .row {
+        margin-top: 60px;
+      }
+    }
+    
+    @media (max-width: 1300px) and (min-width: 769px) {
+      .row {
+        /*     margin-top: calc( (40 / 1300) * 100% ); */
+      }
+    }
+    
+    @media (max-width: 768px) {
+
+      .row,
+      .row .half:nth-child(2) {
+        margin-top: 40px;
+        /*	margin-top: calc((40/591) * 100%); */
+      }
+    }
+    
+    @media (max-width: 591px) {
+
+      .row,
+      .row .half:nth-child(2) {
+        margin-top: 40px;
+        margin-top: calc((40/591) * 100%);
+      }
+    }
+    
+    /* First Row */
+    .row.row1 {
+      margin-top: 0px;
+    }
+    
+    @media (min-width: 1024px) {
+      .show-desk {
+        display: block;
+      }
+      
+      .show-tab {
+        display: none !important;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      .show-desk {
+        display: none !important;
+      }
+      
+      .show-tab {
+        display: block;
+      }
+    }
+    
+    .lazyload,
+    .lazyloading {
+      min-height: 100vh;
+    }
+    
+  </style>
+  
+  
+  
+  
+  <!-- 	DRAGBALLS CSS-->
+  <style>
+    #mob-silder-wrap {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      display: none;
+    }
+    
+    .mob-slider {
+      overflow-x: auto;
+      display: flex;
+      -webkit-overflow-scrolling: touch;
+      -webkit-scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+      overflow-y: hidden;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    
+    .mob-slider .slide {
+      width: 28.57142857142857%;
+      flex-shrink: 0;
+      height: 100%;
+    }
+    
+    .mob-slider::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+      display: none !important;
+    }
+    
+    .mob-slider::-webkit-scrollbar,
+    .mob-slider::-webkit-scrollbar-thumb {
+      overflow: visible;
+      border-radius: 4px;
+      background: transparent;
+    }
+    
+    .mob-slider::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0);
+      background: transparent;
+      display: none;
+    }
+    
+    .mob-slider::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0);
+      display: none;
+    }
+    
+    .cover-bar {
+      position: absolute;
+      background: #fff;
+      height: 3px;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      -webkit-transition: all .5s;
+      opacity: 1;
+    }
+    
+  </style>
+  <script src="https://static.lechateau.com/html/landing/templates/new/dragscroll-min.js" async=""> </script>
+  
+  <style>
+    .row.flex .hover:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    
+    .row.flex .hover:hover:before {
+      content: "";
+      background-color: white;
+      opacity: 0.7;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    
+    .hoverinsta {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      z-index: 22;
+    }
+    
+    .row.flex .hover:hover .hoverinsta {
+      visibility: visible;
+    }
+    
+    .hovermiddleverticalAlign {
+      height: auto;
+      word-wrap: break-word;
+      width: 100%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+    
+    .hovercontent {
+      display: table;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+    }
+    
+    ul.instabar {
+      padding: 20px 0;
+    }
+    
+    ul.instabar li a.in:after {
+      content: "\f16d";
+    }
+    
+    ul.instabar li a:after {
+      font-family: fontawesome;
+      content: '+';
+      font-size: 24px;
+      font-weight: 100;
+      color: black;
+    }
+    
+    .instarow img {
+      width: 100%;
+    }
+    
+    /*INSTAGRAM MOBILE*/
+    .mob-slider.mob-slider2 .slide {
+      width: 85%;
+      flex-shrink: 0;
+      height: 100%;
+    }
+    
+    @media (min-width: 591px) {
+      .mob-slider.mob-slider2 .slide {
+        width: 60%;
+        flex-shrink: 0;
+        height: 100%;
+      }
+    }
+    
+    .mob-slider.mob-slider2 .slide {
+      padding-left: 15px;
+    }
+    
+  </style>
+  
+  
+  <script src="https://static.lechateau.com/html/landing/templates/new/lazyload.min.js" async=""></script>
+  
+</head>
+
+<body>
+  
+  
+  <noscript id="deferred-styles">
+    <!-- !!! DO NOT INCLUDE IN BCC !!!-->
+    <link rel="stylesheet" type="text/css" href="https://static.lechateau.com/static/css/combined.min.css?bust=4c6557c">
+    <link rel="stylesheet" type="text/css" href="https://static.lechateau.com/html/landing/templates/new/MyFontsWebfontsKit.min.css">
+    
+    <!-- !!! DO NOT INCLUDE IN BCC !!!-->
+    <link rel="stylesheet" type="text/css" href="https://static.lechateau.com/html/landing/templates/new/landing-min-3-1.css">
+    
+  </noscript>
+  
+  
+  
+  <div id="landingPage">
+    
+    
+    
+    <!-- DRAGBALLs-->
+    <div class="row1 LP-DEVICE" id="mob-silder-wrap" style="position:relative;">
+      <div class="mob-slider dragscroll">
+        <div class="slide" data-link="Women"><a href="https://www.lechateau.com/style/jump/Women/category/catwfr10001"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_01?$jpeg-prog$" alt="Women" /></a></div>
+        <div class="slide" data-link="Men"><a href="https://www.lechateau.com/style/jump/HOMMES/category/catmfr20001"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_02?$jpeg-prog$" alt="Men" /></a></div>
+        <div class="slide" data-link="Shoes"><a href="https://www.lechateau.com/style/jump/Shoes+/category/catsfr50001"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_03?$jpeg-prog$" alt="Shoes" /></a></div>
+        <div class="slide" data-link="Women Coats"><a href="https://www.lechateau.com/style/jump/Coats+%26+Jackets/category/catwfr10031"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_04?$jpeg-prog$" alt="Women Coats" /></a></div>
+        <div class="slide" data-link="Men Coats"><a href="https://www.lechateau.com/style/jump/Coats+%26+Jackets/category/catmfr20030"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_05?$jpeg-prog$" alt="Men Coats" /></a></div>
+        <div class="slide" data-link="Women Sweaters"><a href="https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/cat43770731"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_06?$jpeg-prog$" alt="Women Sweaters" /></a></div>
+        <div class="slide" data-link="Men Sweaters"><a href="https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/catmfr20027"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_07?$jpeg-prog$" alt="Men Sweaters" /></a></div>
+        <div class="slide" data-link="Dresses"><a href="https://www.lechateau.com/style/jump/Dress+Shop/category/catwfr10022"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_08?$jpeg-prog$" alt="Dresses" /></a></div>
+        <div class="slide" data-link="Accessories"><a href="https://www.lechateau.com/style/jump/Jewellery/category/cat38030787"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_09?$jpeg-prog$" alt="Accessories" /></a></div>
+        <div class="slide" data-link="Bags"><a href="https://www.lechateau.com/style/jump/Handbags+%26+Wallets/category/cat130018"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_10?$jpeg-prog$" alt="Bags" /></a></div>
+        <div class="slide" data-link="Wedding"><a href="https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191011-fr-m_11?$jpeg-prog$" alt="Wedding" /></a></div>
+        <div class="slide" data-link="Sale"><a href="https://www.lechateau.com/style/jump/SALE/category/cat260028"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-sale-190906-fr-m_01?$jpeg-prog$" alt="Sale" /></a></div>
+        <!--+dragball('https://www.lechateau.com/style/jump/OUTLET/category/cat37310715', 'stopslider-191015-fr-m_02', 'Outlet')-->
+        <div class="slide" data-link="Outlet"><a href="https://www.lechateau.com/style/jump/OUTLET/category/cat37310715"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-191108-FS-fr-m?$jpeg-prog$" alt="Outlet" /></a></div>
+        <div class="slide" data-link="Clearance"><a href="https://www.lechateau.com/style/jump/CLEARANCE/category/cat45930750"><img src="https://lechateau.scene7.com/is/image/LeChateau/stopslider-h-191016-fr?$jpeg-prog$" alt="Clearance" /></a></div>
+      </div>
+    </div>
+    
+    
+    
+    
+    <style>
+      /* HERO CSS */
+      @media (min-width: 1300px) {
+        #landingPage>div.row.hero.party>div.ctas.LP-DESKTOP>a {
+          position: relative;
+        }
+        
+        #landingPage>div.row.hero.party>div.ctas.LP-DESKTOP {
+          height: 0px;
+        }
+        
+        #landingPage>div.row.hero.party>div.ctas.LP-DESKTOP>a {
+          top: 553px;
+          left: -615px;
+        }
+      }
+      
+      @media (max-width: 1300px) and (min-width: 769px) {
+        #landingPage>div.row.hero.party>div.ctas.LP-DESKTOP>a {
+          position: absolute;
+        }
+        
+        #landingPage>div.row.hero.party>div.ctas.LP-DESKTOP>a {
+          left: 12%;
+          top: 83%;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .row.margin-0 {
+          margin-top: 60px;
+          margin-top: calc((40/591) * 100%);
+        }
+      }
+      
+    </style>
+    <!-- ROW - PRE-BF SALE-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-0" href="https://www.lechateau.com/style/jump/50%25+Off+Dresses+/category/cat260081" title="Magasinez les robes" style="left:13%; bottom: 5%;">50% de rabais sur les robes</a>
+        
+        <a class="btn-lc regular margin-0" href="https://www.lechateau.com/style/jump/50%25+Off+All+Shoes+%26+Boots/category/cat260038" title="Magasinez les chaussures" style="left:38%; bottom: 5%;">50% de rabais sur les chaussures</a>
+        
+        <a class="btn-lc regular margin-0" href="https://www.lechateau.com/style/jump/SALE/category/cat260028" title="Magasinez les soldes" style="left:67%; bottom: 5%;">Magasinez tous les articles en solde</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/SALE/category/cat260028" title="Magasinez les soldes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/prebf-dresses-251119-m-fr?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/prebf-dressesshoes-251119-fr-d?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img src="https://lechateau.scene7.com/is/image/LeChateau/prebf-dresses-251119-m-fr?$jpeg-prog$" alt="Solde pr&amp;eacute;-vendredi fou" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      <div class="image-map LP-DEVICE">
+        
+        <a href="https://www.lechateau.com/style/jump/50%25+Off+Dresses+/category/cat260081" title="Magasinez les robes" style="height:65%; top:0; left:0; position:absolute; width:100%;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/50%25+Off+All+Shoes+%26+Boots/category/cat260038" title="Magasinez les chaussures" style="height:18%; top:64%; left:0; position:absolute; width:100%;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/SALE/category/cat260028" title="Magasinez les soldes" style="height:20%; top:80%; left:0; position:absolute; width:100%;">&nbsp;</a>
+      </div>
+    </div>
+    <!-- END - PRE-BF SALE-->
+
+    
+    <!-- ROW - HERO PARTY-->
+    <div class="row hero party">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc secondary margin-00" href="https://www.lechateau.com/style/jump/New+Arrivals/category/catwfr10020" title="Magasinez les nouveautés pour femmes">Magasinez les nouveautés</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/New+Arrivals/category/catwfr10020" title="Magasinez les nouveautés pour femmes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_01?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(max-width: 1300px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_01-1300?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            
+            <!-- Hero-->
+            <source media="(min-width: 1300px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_01?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img src="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_01?$jpeg-prog$" alt="Jour de fête. Sortez en beauté et arborez un look impec jusqu’aux petites heures du matin. Magasinez les nouveautés" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+    </div>
+    <!-- END - ROW-->
+    <!-- ROW - SIZE-->
+    <div class="row margin-00">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/New+Arrivals/category/catwfr10020" title="">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_02?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_03?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img src="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_02?$jpeg-prog$" alt="" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - ROW - SIZE-->
+    <!-- ROW - DRESSES-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-0" href="https://www.lechateau.com/style/jump/Dresses/category/cat37630709" title="Magasinez les robes" style="left:5%; bottom: 0%;">Magasinez les robes</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Dresses/category/cat37630709" title="Magasinez les robes ">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_03?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_06?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img src="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_03?$jpeg-prog$" alt="Robes pour briller. Affichez votre sens du style irréprochable. Magasinez les robes" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - ROW DRESSES-->
+    
+    
+    <!-- ROW - DRESSES-->
+    <div class="row">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Metallic+Knit+Wrap-Like+Dress/productDetail/All+Women/376726/cat37630709" title="">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_05?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_09?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      <div class="image-map LP-DESKTOP">
+        
+        <a href="https://www.lechateau.com/style/jump/Metallic+Knit+Wrap-Like+Dress/productDetail/All+Women/376726/cat37630709" title="Achetez la robe cache-coeur métallisée" style="top: 0; left:0; height:100%; width: 25%; position: absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Floral+Knit+Cr%C3%AApe+Off-the-Shoulder+Dress/productDetail/Dresses/378026/cat37630709" title="Achetez la robe à épaules dénudées" style="top: 0; left:25%; height:100%; width: 25%; position: absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Knit+Cowl+Neck+Cocktail+Dress/productDetail/Dresses/377582/cat37630733" title="Achetez la petite robe noire" style="top: 0; left:50%; height:100%; width: 25%; position: absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Velvet+Wrap-Like+Dress/productDetail/Dresses/376992/cat37630709" title="Achetez la robe cache-coeur en velours " style="top: 0; left:75%; height:100%; width: 25%; position: absolute;">&nbsp;</a>
+      </div>
+      <div class="image-map LP-DEVICE">
+        
+        <a href="https://www.lechateau.com/style/jump/Floral+Knit+Cr%C3%AApe+Off-the-Shoulder+Dress/productDetail/Dresses/378026/cat37630709" title="Achetez la robe à épaules dénudées" style="top: 0; left:0%; height:100%; width: 50%; position: absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Knit+Cowl+Neck+Cocktail+Dress/productDetail/Dresses/377582/cat37630733" title="Achetez la petite robe noire" style="top: 0; left:50%; height:100%; width: 50%; position: absolute;">&nbsp;</a>
+      </div>
+    </div>
+    <!-- END - ROW - DRESSES-->
+    
+    
+    <!-- ROW - TOPS-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/Tops/category/catwfr10025" title="Magasinez les hauts pour femmes" style="left:52%; top: 86%;">Magasinez les hauts</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Tops/category/catwfr10025" title="Magasinez les hauts pour femmes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_07?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_15?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hauts remarquables. À la fois élégants et stylés, ces hauts sont conçus pour un effet wow. Magasinez les hauts" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - ROW TOPS-->
+    
+    
+    
+    
+    
+    <!-- ROW - SHOES -->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/Holiday+%26+Party/category/cat39170936" title="Magasinez les chaussures de fête et party pour femmes" style="left:65%; top: 84%;">Magasinez maintenant</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Holiday+%26+Party/category/cat39170936" title="Magasinez les chaussures de fête et party pour femmes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_09?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_21?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Chaussures festives. Rehaussez votre look d’un cran avec ces styles fabuleux. Magasinez maintenant " decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - SHOES-->
+    
+    
+    <!-- ROW - SHOES ITEMS-->
+    <div class="row">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Metallic+Knit+Wrap-Like+Dress/productDetail/All+Women/376726/cat37630709" title="">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_11?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_24?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      <div class="image-map LP-DESKTOP">
+        
+        <a href="https://www.lechateau.com/style/jump/Faux+Suede+Pointy+Toe+Pump/productDetail/Pumps/376842/catsfr51002" title="Achetez l'escarpin à bout pointu" style="top: 0; left:0; height:100%; width: 25%; position: absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Faux+Suede+Ankle+Boot/productDetail/All+Shoes+%26+Boots/375483/cat45250704" title="Achetez la botte au genou extensible" style="top: 0; left:25%; height:100%; width: 25%; position: absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Faux+Suede+Pointy+Toe+Knee-High+Boot/productDetail/Combat+%26+Lace-up+Boots/375069/cat45870755" title="Achetez la botte au  genou lacée" style="top: 0; left:50%; height:100%; width: 25%; position: absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Stretch+Faux+Leather+Knee-High+Boot/productDetail/Stretch+Boots+/376261/cat45870755" title="Achetez la botte chelsea" style="top: 0; left:75%; height:100%; width: 25%; position: absolute;">&nbsp;</a>
+      </div>
+      <div class="image-map LP-DEVICE">
+        
+        <a href="https://www.lechateau.com/style/jump/Faux+Suede+Ankle+Boot/productDetail/All+Shoes+%26+Boots/375483/cat45250704" title="Achetez la botte au genou extensible" style="top: 0; left:0%; height:100%; width: 50%; position: absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Faux+Suede+Pointy+Toe+Pump/productDetail/Pumps/376842/catsfr51002" title="Achetez l'escarpin à bout pointu" style="top: 0; left:50%; height:100%; width: 50%; position: absolute;">&nbsp;</a>
+      </div>
+    </div>
+    <!-- END - TOPS ITEMS-->
+    
+    
+    <!-- ROW - PLUS-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/Plus+Size/category/cat44810713" title="Magasinez les tailles plus" style="left:36%; top: 88%;">Tailles plus</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Plus+Size/category/cat44810713" title="Magasinez les tailles plus">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_13?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_30?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Plus de styles, plus de tailles. Des styles à couper le souffle offerts jusqu’en tailles 3X et 22W en ligne et dans les magasins sélectionnés. Tailles plus" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - PLUS-->
+    
+    
+    <!-- ROW - COATS-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-40" href="https://www.lechateau.com/style/jump/Coats+%26+Jackets/category/catwfr10031" title="Magasinez les blousons et manteaux pour femmes" style="right:11%; top: 88%;">Magasinez les manteaux</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Coats+%26+Jackets/category/catwfr10031" title="Magasinez les blousons et manteaux pour femmes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_15?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_36?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Manteaux incontournables. Peu importe les caprices de la météo, restez au chaud avec ces essentiels d’hiver. Magasinez les manteaux" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - COATS-->
+    
+    
+    <!-- ROW - SWEATERS/BOOTS-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-0" href="https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/cat43770731" title="Magasinez les chandails et cardigans pour femmes" style="left:1%; bottom: 0;">Magasinez les chandails</a>
+        
+        <a class="btn-lc regular margin-0" href="https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704" title="Magasinez les bottes pour femmes" style="left:51%; bottom: 0;">Magasinez les bottes </a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/cat43770731" title="Magasinez les chandails et cardigans pour femmes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_17?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_42?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Chandails confos-chics. Parfaits pour tous les jours de la semaine. Magasinez les chandails" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      <div class="image-map LP-DESKTOP">
+        
+        <a href="https://www.lechateau.com/style/jump/Sweaters+%26+Cardigans/category/cat43770731" title="Magasinez les chandails et cardigans pour femmes" style=" width:50%; height: 100%; left:0; top:0; position:absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704" title="Magasinez les bottes pour femmes" style=" width:50%; height: 100%; left:50%; top:0; position:absolute;">&nbsp;</a>
+      </div>
+    </div>
+    <!-- END - COATS-->
+    
+    
+    <!-- ROW - MOBILE BOOTS-->
+    <div class="row LP-DEVICE">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/Boots+%26+Shooties/category/cat45250704" title="Magasinez les bottes pour femmes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_19?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_19?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Bottes de saison. Conçues pour vous assurer chaleur et confort. Magasinez les bottes " decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - ROW-->
+    
+    
+    
+    
+    
+    <!-- ROW - MEN-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc secondary margin-40" href="https://www.lechateau.com/style/jump/All+Men/category/cat46020718" title="Magasinez les vêtements pour hommes" style="left:53%; top: 77%;">Vêtements pour hommes</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/All+Men/category/cat46020718" title="Magasinez les vêtements pour hommes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_21?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_48?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Manteaux matelassés. Voici le parfait manteau garni de duvet. Offert en trois couleurs. L’article le plus cool de votre tenue sera également le plus chaud. Vêtements pour hommes" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - MEN-->
+    
+    
+    <!-- ROW -  WEDDING-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc secondary margin-40" href="https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589" title="Explorez la Boutique mariage" style="left:13.5%; top: 59%;">La Boutique mariage</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589" title="Explorez la Boutique mariage">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-m_23?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-08-11-19-fr-d_54?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="RSVP avec style. Pour toutes vos invitations de la saison, tournez-vous vers les looks les plus convoités. La Boutique mariage" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - WEDDING-->
+    
+    
+    <!-- ROW - APPOINTMENT-->
+    <div class="row">
+      <!-- ctas-->
+      <div class="ctas LP-DESKTOP">
+        
+        <a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/editorial.jsp?content=lifestyled" title="Fixez un rendez-vous de stylisme personnel" style="right:61.5%; top: 89%;">EN SAVOIR PLUS</a>
+      </div>
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/editorial.jsp?content=lifestyled" title="Fixez un rendez-vous de stylisme personnel">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/styling-service-banner-190920-fr-m?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/styling-service-banner-190920-fr-d?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Voici Votre mode de vie stylée Service de stylisme personnel. Fixez un rendez-vous en magasin avec nos stylistes LE CHÂTEAU.  - Expérience personnalisée  - Jusqu'à 60 minutes de service de stylisme et de conseils mode  - Tenues créées en fonction de votre style personnel ou de l'événement à venir - Salle d'essayage réservée  + recevez un cadeau spécial  *Quantités limitées. En savoir plus&gt;" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+    </div>
+    <!-- END - ROW APPOINTMENT-->
+    <!-- ROW - OUTLET BOTTOM-->
+    <div class="row LP-DESKTOP">
+      <!-- image-->
+      <div class="image-bckg">
+        
+        <a href="https://www.lechateau.com/style/jump/SALE/category/cat260028" title="Magasinez les soldes">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/salebanner-191016-fr-d-v2?$jpeg-prog$" />
+            
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/salebanner-191016-fr-d-v2?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]-->
+            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Magasinez les soldes" decoding="async" />
+            
+          </picture>
+        </a>
+        
+      </div>
+      
+      <!-- image-map-->
+      <div class="image-map">
+        
+        <a href="https://www.lechateau.com/style/jump/SALE/category/cat260028" title="Magasinez les soldes" style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/OUTLET/category/cat37310715" title="Magasinez les soldes de l'entrepôt" style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;">&nbsp;</a>
+        
+        <a href="https://www.lechateau.com/style/jump/CLEARANCE/category/cat45930750" title="Magasinez les soldes de liquidation" style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;">&nbsp;</a>
+      </div>
+    </div>
+    <!-- END - ROW-->
+    
+    
+    <!-- INSTAGRAM - START-->
+    
+    <div class="row">
+      <div class="image-bckg"><a href="https://www.instagram.com/lechateau/" target="_blank" title="Suivez LE CHÂTEAU sur instagram">
+          <picture>
+            <!-- [if IE 9]><audio><![endif]-->
+            <!-- Mobile-->
+            <source media="(max-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-190729-fr-m_17?$jpeg-prog$" />
+            <!-- Desktop-->
+            <source media="(min-width: 768px)" data-srcset="https://lechateau.scene7.com/is/image/LeChateau/lechateau-190719-fr-d_insta?$jpeg-prog$" />
+            <!--[if IE 9]></audio><![endif]--><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Suivez LE CHÂTEAU sur instagram" decoding="async" />
+          </picture>
+        </a>
+      </div>
+    </div>
+    
+    <div class="row flex LP-DESKTOP instarow margin-40 stay">
+      
+      
+      
+      <!-- Slice-->
+      <div class="hover">
+        <div class="hoverinsta">
+          <div class="hovercontent">
+            <div class="hovermiddleverticalAlign">
+              <ul class="instabar">
+                <li><a class="in" href="" target="_blank" title="Instagram">&nbsp;</a></li>
+              </ul><a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/jump/INSTAG376021_063/productDetail/Social+Looks/INSTAG376021_063/cat46700705" target="_top" title="Magasinez les nouveautés pour femmes" style="left:36%; top: 60%;">MAGASINEZ</a>
+            </div>
+          </div>
+        </div>
+        <a target="_blank" href="https://www.lechateau.com/style/jump/INSTAG376021_063/productDetail/Social+Looks/INSTAG376021_063/cat46700705" title="Suivez LE CHÂTEAU sur instagram"><img class="lazyload" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-190925-01?$jpeg-prog$" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Magasinez les nouveautés pour femmes" /></a>
+      </div>
+      
+      
+      
+      <!-- Slice-->
+      <div class="hover">
+        <div class="hoverinsta">
+          <div class="hovercontent">
+            <div class="hovermiddleverticalAlign">
+              <ul class="instabar">
+                <li><a class="in" href="" target="_blank" title="Instagram">&nbsp;</a></li>
+              </ul><a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/jump/INSTAG376589_209/productDetail/Social+Looks/INSTAG376589_209/cat46700705" target="_top" title="Magasinez les nouveautés pour femmes" style="left:36%; top: 60%;">MAGASINEZ</a>
+            </div>
+          </div>
+        </div>
+        <a target="_blank" href="https://www.lechateau.com/style/jump/INSTAG376589_209/productDetail/Social+Looks/INSTAG376589_209/cat46700705" title="Suivez LE CHÂTEAU sur instagram"><img class="lazyload" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-190925-02?$jpeg-prog$" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Magasinez les nouveautés pour femmes" /></a>
+      </div>
+      
+      
+      
+      <!-- Slice-->
+      <div class="hover">
+        <div class="hoverinsta">
+          <div class="hovercontent">
+            <div class="hovermiddleverticalAlign">
+              <ul class="instabar">
+                <li><a class="in" href="" target="_blank" title="Instagram">&nbsp;</a></li>
+              </ul><a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/jump/INSTAG370115_053/productDetail/Social+Looks/INSTAG370115_053/cat46700705" target="_top" title="Magasinez les nouveautés pour femmes" style="left:36%; top: 60%;">MAGASINEZ</a>
+            </div>
+          </div>
+        </div>
+        <a target="_blank" href="https://www.lechateau.com/style/jump/INSTAG370115_053/productDetail/Social+Looks/INSTAG370115_053/cat46700705" title="Suivez LE CHÂTEAU sur instagram"><img class="lazyload" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-190925-03?$jpeg-prog$" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Magasinez les nouveautés pour femmes" /></a>
+      </div>
+      
+      
+      
+      <!-- Slice-->
+      <div class="hover">
+        <div class="hoverinsta">
+          <div class="hovercontent">
+            <div class="hovermiddleverticalAlign">
+              <ul class="instabar">
+                <li><a class="in" href="" target="_blank" title="Instagram">&nbsp;</a></li>
+              </ul><a class="btn-lc regular margin-00" href="https://www.lechateau.com/style/jump/INSTAG375984_446/productDetail/Social+Looks/INSTAG375984_446/cat46700705" target="_top" title="Magasinez les nouveautés pour femmes" style="left:36%; top: 60%;">MAGASINEZ</a>
+            </div>
+          </div>
+        </div>
+        <a target="_blank" href="https://www.lechateau.com/style/jump/INSTAG375984_446/productDetail/Social+Looks/INSTAG375984_446/cat46700705" title="Suivez LE CHÂTEAU sur instagram"><img class="lazyload" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-190925-05?$jpeg-prog$" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Magasinez les nouveautés pour femmes" /></a>
+      </div>
+    </div>
+    
+    
+    <!-- MOBILE-->
+    
+    <div class="row LP-DESKTOP margin-20"><a class="btn-lc regular" href="https://www.instagram.com/lechateau/" target="_blank" title="Suivez LE CHÂTEAU sur instagram">SUIVEZ-NOUS SUR INSTAGRAM</a></div>
+    <div class="row LP-DEVICE" id="mob-silder-wrap2" style="position:relative;">
+      <div class="mob-slider dragscroll mob-slider2">
+        <div class="slide"><a href="https://www.lechateau.com/style/jump/INSTAG376021_063/productDetail/Social+Looks/INSTAG376021_063/cat46700705" target="_top" title="Magasinez les nouveautés pour femmes"><img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-190925-01?$jpeg-prog$" alt="Suivez LE CHÂTEAU sur instagram" /></a></div>
+        <div class="slide"><a href="https://www.lechateau.com/style/jump/INSTAG376589_209/productDetail/Social+Looks/INSTAG376589_209/cat46700705" target="_top" title="Magasinez les nouveautés pour femmes"><img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-190925-02?$jpeg-prog$" alt="Suivez LE CHÂTEAU sur instagram" /></a></div>
+        <div class="slide"><a href="https://www.lechateau.com/style/jump/INSTAG370115_053/productDetail/Social+Looks/INSTAG370115_053/cat46700705" target="_top" title="Magasinez les nouveautés pour femmes"><img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-190925-03?$jpeg-prog$" alt="Suivez LE CHÂTEAU sur instagram" /></a></div>
+        <div class="slide"><a href="https://www.lechateau.com/style/jump/INSTAG375984_446/productDetail/Social+Looks/INSTAG375984_446/cat46700705" target="_top" title="Magasinez les nouveautés pour femmes"><img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-190925-05?$jpeg-prog$" alt="Suivez LE CHÂTEAU sur instagram" /></a></div>
+      </div>
+    </div>
+    
+    <div class="row LP-DEVICE">
+      <div class="image-bckg"><a target="_blank" href="https://www.instagram.com/lechateau/" title="Suivez LE CHÂTEAU sur instagram"></a></div>
+    </div>
+    
+    <!-- END - INSTAGRAM-->
+    <div class="row margin-20 stay">*Styles sélectionnés.</div>
+    
+    
+  </div>
+  
+  
+  
+  <script>
+    // defer css
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() {
+      window.setTimeout(loadDeferredStyles, 0);
+    });
+    else window.addEventListener('load', loadDeferredStyles);
+    // Polyfill for responsive images
+    function loadJS(u) {
+      var r = document.getElementsByTagName("script")[0],
+        s = document.createElement("script");
+      s.src = u;
+      r.parentNode.insertBefore(s, r);
+    }
+    if (!window.HTMLPictureElement) {
+      document.createElement('picture');
+      loadJS("https://static.lechateau.com/html/landing/templates/new/respimage.min.js");
+    }
+    
+    function checkDevice() {
+      var isiPad = function() {
+        return (navigator.platform.indexOf("iPad") != -1);
+      }
+      var isiPhone = function() {
+        return (
+          //Detect iPhone
+          (navigator.platform.indexOf("iPhone") != -1) ||
+          //Detect iPod
+          (navigator.platform.indexOf("iPod") != -1)
+        );
+      }
+      if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i) || isiPad() || isiPhone()) {
+        return true;
+      }
+      return false;
+    }
+    $(document).ready(function(e) {
+      // check if device
+      try {
+        var checkDev = checkDevice();
+        if (checkDev == true) {
+          $("#mob-silder-wrap").show();
+        }
+      } catch (err) {}
+      $(".dragscroll .slide").click(function() {
+        var n = $(this).data("link");
+        dataLayer.push({
+          "event": "dragballs",
+          "eventAction": n, // name
+          "eventLabel": 'Home' // CHANGE PAGE HERE
+        });
+      });
+    });
+    
+  </script>
+  
+  
+  
+</body>
+
+</html>
