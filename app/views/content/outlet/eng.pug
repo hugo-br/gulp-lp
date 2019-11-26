@@ -28,28 +28,60 @@
 |
 |
 |
+style.
+    @media (max-width: 768px) {
+    .row.margin-0 {
+    margin-top: 60px;
+    margin-top: calc((40/591) * 100%);
+    }
+    }
 
 //-START ----------------------
-// ROW - MEN
-.row
+// ROW
+.row.row1
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Robes/category/cat37310731', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/Sale/lp-flash-191126-en-d_01.gif',
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/Sale/lp-flash-191126-en-m_01.gif',
+      false)
+  |
+  |
+|
+|
+// END
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+.row.row1
   // ctas
   .ctas.LP-DESKTOP
-    +cta('SHOP MENSWEAR', 
-		 'https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
-		 "Shop Men's Clothing")(class="btn-lc secondary margin-00", style="right:61%; top: 84%;")
+    +cta('SHOP Dress', 
+		 'https://www.lechateau.com/style/jump/Robes/category/cat37310731', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:25%; top: 28%;")
+    +cta('SHOP Shoes', 
+		 'https://www.lechateau.com/style/jump/Pumps/category/cat38210822', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left: 57%; top: 28%;")     
   |
   |
   // image
-  +bckImg('https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
-		  "Shop Men's Clothing",
-		  "New for Men. Layering is key to managing the shift between seasons.  Shop menswear",
-		  'lechateau-091019-en-d_17',
-		  'lechateau-091019-en-m_19')
+  +bckImg('https://www.lechateau.com/style/jump/Pumps/category/cat38210822', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191125-en-d_02',
+		  'lp-flash-191125-en-m_02',
+      false)
   |
   |
 |
 |
-// END - MEN
+// END
 |
 |
 |
@@ -59,78 +91,300 @@
 
 
 //-START ----------------------
-// ROW - WEDDING
-.row
+// ROW
+.row.margin-0
   // ctas
   .ctas.LP-DESKTOP
-    +cta('Explore The Wedding Boutique', 
-		 'https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
-		 'Explore The Wedding Boutique')(class="btn-lc regular margin-00", style="left:53%; top: 93%;")
+    +cta('SHOP LBDS', 
+		 'https://www.lechateau.com/style/jump/Little+Black+Dresses/category/cat44980708', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:57%; top: 71%;")   
   |
   |
   // image
-  +bckImg('https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
-		  'Explore The Wedding Boutique',
-		  "The Wedding Boutique. Dreamy styles for every wedding this season, no matter the dress code. Explore the wedding boutique >",
-		  'lechateau-091019-en-d_19', 
-		  'lechateau-091019-en-m_21')
+  +bckImg('https://www.lechateau.com/style/jump/Little+Black+Dresses/category/cat44980708', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-d_03',
+		  'lp-flash-191126-en-m_04',
+      false)
   |
   |
 |
 |
-// END - ROW
+// END
 |
-|
-|
-|
+//- END - ROW
 //-END--------------------
 
 
 //-START ----------------------
-// ROW - APPOINTMENT
+// ROW
 .row
   // ctas
   .ctas.LP-DESKTOP
-    +cta('LEARN MORE', 'https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 'Book a Personal Styling Appointment')(class="btn-lc regular margin-00", style="right:61.5%; top: 83%;")
+    +cta('SHOP COCKTAIL DRESS', 
+		 'https://www.lechateau.com/style/jump/Cocktail+%26+Party/category/cat37440707', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:13%; top: 77%;")   
   |
   |
   // image
-  +bckImg('https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 'Fixez un rendez-vous de stylisme personnel', "Introducing Your Life Styled Personal Styling Service. Book an in-store appointment with our LE CHÂTEAU stylists. - One-on-one personalized experience - Up to 60mins of expert styling & fashion advice - Looks tailored to your personal style/upcoming event -Reserved changing room + Receive a special gift  *Limited quantities. Learn more >", 'styling-service-banner-190920-en-d', 'styling-service-banner-190920-en-m')
+  +bckImg('https://www.lechateau.com/style/jump/Cocktail+%26+Party/category/cat37440707', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-d_05',
+		  'lp-flash-191126-en-m_06',
+      false)
   |
   |
 |
 |
-// END - ROW
+// END
+|
+//- END - ROW
+//-END--------------------
+
+//-START ----------------------
+// ROW
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('SHOP NIGHT OUT', 
+		 'https://www.lechateau.com/style/jump/Night+Out/category/cat44980706', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:57%; top: 67%;")   
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Night+Out/category/cat44980706', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-d_07',
+		  'lp-flash-191126-en-m_08')
+  |
+  |
 |
 |
+// END
 |
-|
+//- END - ROW
 //-END--------------------
 
 
 //-START ----------------------
-// ROW - OUTLET BOTTOM
-.row.LP-DESKTOP
+// ROW
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('SHOP PUMPS', 
+		 'https://www.lechateau.com/style/jump/Pumps/category/cat38210822', 
+		 "Shop the Outlet Flash Sale")(class="gothamMed underlineCTA white margin-00", style="right:11%; top: 22%; color: white;")
+    +cta('SHOP SANDALS', 
+		 'https://www.lechateau.com/style/jump/Sandals/category/cat39970707',
+		 "Shop the Outlet Flash Sale")(class="gothamMed underlineCTA white margin-00", style="right:11%; top: 46%; color: white;") 
+    +cta('SHOP BAGS', 
+		 'https://www.lechateau.com/style/jump/Handbags/category/cat38150811', 
+		 "Shop the Outlet Flash Sale")(class="gothamMed underlineCTA white margin-00", style="right:11%; top: 72%; color: white;") 
+    +cta('SHOP NIGHT OUT', 
+		 'https://www.lechateau.com/style/jump/Night+Out/category/cat46930703', 
+		 "Shop the Outlet Flash Sale")(class="gothamMed underlineCTA white margin-00", style="right:11%; top: 82%; color: white;")               
   |
   |
   // image
-  +bckImg('', 'Shop Dresses on Sale', 'Shop Dresses on Sale', 'salebanner-home-190906-en-d', '')
+  +bckImg('https://www.lechateau.com/style/jump/Pumps/category/cat38210822', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-d_09',
+		  'lp-flash-191126-en-m_10')
   |
-  // image-map
-  .image-map
-    +map('https://www.lechateau.com/style/jump/SALE/category/cat260028', 'Shop Sale')(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
-    +map('https://www.lechateau.com/style/jump/OUTLET/category/cat37310715', 'Shop the Outlet Store')(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
-    +map('https://www.lechateau.com/style/jump/CLEARANCE/category/cat45930750', 'Shop Clearance')(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
-    |
-    |
   |
+  .image-map.LP-DESKTOP
+     +map('https://www.lechateau.com/style/jump/Pumps/category/cat38210822', "Shop the Outlet Flash Sale")(style="height:100%; top:0; left:0; position:absolute; width:65%;")
+     +map('https://www.lechateau.com/style/jump/Pumps/category/cat38210822', "Shop the Outlet Flash Sale")(style="height:25%; top:0; left:65%; position:absolute; width:35%;")
+     +map('https://www.lechateau.com/style/jump/Sandals/category/cat39970707', "Shop the Outlet Flash Sale")(style="height:25%; top:25%; left:65%; position:absolute; width:35%;")
+     +map('https://www.lechateau.com/style/jump/Handbags/category/cat38150811', "Shop the Outlet Flash Sale")(style="height:25%; top:50%; left:65%; position:absolute; width:35%;")
+     +map('https://www.lechateau.com/style/jump/Night+Out/category/cat46930703', "Shop the Outlet Flash Sale")(style="height:25%; top:75%; left:65%; position:absolute; width:35%;")  
 |
 |
-// END - ROW
+// END
 |
-|
-|
+//- END - ROW
 //-END--------------------
 
+// ROW
+.row.LP-DEVICE.margin-00
+  // ctas
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Sandals/category/cat39970707', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-m_11',
+		  'lp-flash-191126-en-m_11')
+  |
+  |
+|
+|
+// END
+|
+|
+
+// ROW
+.row.LP-DEVICE.margin-00
+  // ctas
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Handbags/category/cat38150811', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-m_12',
+		  'lp-flash-191126-en-m_12')
+  |
+  |
+|
+|
+// END
+|
+|
+
+// ROW
+.row.LP-DEVICE.margin-00
+  // ctas
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Night+Out/category/cat46930703', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-m_13',
+		  'lp-flash-191126-en-m_13')
+  |
+  |
+|
+|
+// END
+|
+|
+
+//-START ----------------------
+// ROW
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('SHOP EVENING GOWNS', 
+		 'https://www.lechateau.com/style/jump/Evening+%26+Formal/category/cat44980705', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:60%; top: 70%;")           
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Evening+%26+Formal/category/cat44980705', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-d_11',
+		  'lp-flash-191126-en-m_15')
+  |
+  |
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW
+.row.margin-0
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('SHOP MINIS', 
+		 'https://www.lechateau.com/style/jump/Mini/category/cat46700702', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:18%; top: 84%;")   
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Mini/category/cat46700702', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-d_12',
+		  'lp-flash-191126-en-m_17')
+  |
+  |
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('SHOP COVER UPS', 
+		 'https://www.lechateau.com/style/jump/Dressy+Cover+Ups/category/cat44920703', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:66%; bottom: 0%;")
+    +cta('2 FOR 15$', 
+		 'https://www.lechateau.com/style/jump/Accessories%3A+2+for+%2415/category/cat46670724', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:20%; bottom: 0%;")           
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Dressy+Cover+Ups/category/cat44920703', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-d_14',
+		  'lp-flash-191126-en-m_19')
+  |
+  |
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW
+.row.margin-00
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('3 FOR 10$', 
+		 'https://www.lechateau.com/style/jump/Accessories%3A+3+for+%2410+/category/cat46730705', 
+		 "Shop the Outlet Flash Sale")(class="btn-lc regular margin-00", style="left:20%; bottom: 0%;")          
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Accessories%3A+2+for+%2415/category/cat46670724', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191125-en-d_15',
+		  'lp-flash-191126-en-m_20')
+  |
+  |
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+
+// ROW
+.row.LP-DEVICE.margin-00
+  // ctas
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Night+Out/category/cat46930703', 
+		  "Shop the Outlet Flash Sale",
+		  "Shop the Outlet Flash Sale",
+		  'lp-flash-191126-en-m_21',
+		  'lp-flash-191126-en-m_21')
+  |
+  |
+|
+|
+// END
+|
+|
 
 +legal("*Select styles.")

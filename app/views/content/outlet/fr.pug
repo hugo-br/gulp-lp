@@ -9,32 +9,79 @@
 //-   +shopIcon(link, lang)(style="left:0%; top:0%;") //within .ctas
 //-
 //- break-point: LP-DESKTOP / LP-DEVICE
+//-
+//-.row
+//-  .ctas.LP-DESKTOP
+//-    +cta('text', 'href', 'seo')
+//-    |
+//-    |
+//-  +bckImg('link', 'seo', 'alt-text', 'desktop', 'mob')
+//-  |
+//-  |
+//-  |
+//-  // image
+//-  .image-map
+//-    +map('link', 'seo')
+//-    |
+//-    |
 |
 |
 |
 |
+style.
+    @media (max-width: 768px) {
+    .row.margin-0 {
+    margin-top: 60px;
+    margin-top: calc((40/591) * 100%);
+    }
+    }
 
 //-START ----------------------
-// ROW - MEN
-.row
+// ROW
+.row.row1
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Robes/category/cat37310731', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/Sale/lp-flash-191126-fr-d_01.gif',
+		  'https://lechateau.scene7.com/is/content/LeChateau/landing/shops/Sale/lp-flash-191126-fr-m_01.gif',
+      false)
+  |
+  |
+|
+|
+// END
+|
+|
+|
+|
+//- END - ROW
+//-END--------------------
+
+
+.row.row1
   // ctas
   .ctas.LP-DESKTOP
-    +cta('VêTEMENTS POUR HOMMES', 
-		 'https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
-		 'Magasinez les vêtements pour hommes')(class="btn-lc secondary margin-00", style="right:61%; top: 84%;")
+    +cta('ROBES', 
+		 'https://www.lechateau.com/style/jump/Robes/category/cat37310731', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:25%; top: 28%;")
+    +cta('CHAUSSURES', 
+		 'https://www.lechateau.com/style/jump/Pumps/category/cat38210822', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left: 57%; top: 28%;")     
   |
   |
   // image
-  +bckImg('https://www.lechateau.com/style/jump/All+Men/category/cat46020718', 
-		  'Magasinez les vêtements pour hommes',
-		  "Du nouveau pour lui. La clé pour faire la transition entre les saisons? La superposition.  Vêtements pour hommes",
-		  'lechateau-091019-fr-d_17', 
-		  'lechateau-091019-fr-m_19')
+  +bckImg('https://www.lechateau.com/style/jump/Pumps/category/cat38210822', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191125-en-d_02',
+		  'lp-flash-191125-en-m_02',
+      false)
   |
   |
 |
 |
-// END - MEN
+// END
 |
 |
 |
@@ -44,88 +91,284 @@
 
 
 //-START ----------------------
-// ROW - WEDDING
-.row
+// ROW
+.row.margin-0
   // ctas
   .ctas.LP-DESKTOP
-    +cta('Explorez la Boutique mariage', 
-		 'https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
-		 'Explorez la Boutique mariage')(class="btn-lc regular margin-00", style="left:53%; top: 93%;")
+    +cta('PETITES ROBES NOIRES', 
+		 'https://www.lechateau.com/style/jump/Little+Black+Dresses/category/cat44980708', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:57%; top: 71%;")   
   |
   |
   // image
-  +bckImg('https://www.lechateau.com/style/jump/The+Wedding+Boutique/category/cat38761589', 
-		  'Explorez la Boutique mariage',
-		  "La Boutique mariage. Des tenues à faire rêver pour tous les mariages de la saison, peu importe le code vestimentaire. Explorez la Boutique mariage >",
-		  'lechateau-091019-fr-d_19', 
-		  'lechateau-091019-fr-m_21')
+  +bckImg('https://www.lechateau.com/style/jump/Little+Black+Dresses/category/cat44980708', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-d_03',
+		  'lp-flash-191126-fr-m_04',
+      false)
   |
   |
 |
 |
-// END - ROW
+// END
 |
-|
-|
-|
-//- END - ROW WEDDING
+//- END - ROW
 //-END--------------------
 
 
 //-START ----------------------
-// ROW - APPOINTMENT
+// ROW
 .row
   // ctas
   .ctas.LP-DESKTOP
-    +cta('EN SAVOIR PLUS', 
-		 'https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 
-		 'Fixez un rendez-vous de stylisme personnel')(class="btn-lc regular margin-00", style="right:61.5%; top: 89%;")
+    +cta('ROBES COCKTAIL', 
+		 'https://www.lechateau.com/style/jump/Cocktail+%26+Party/category/cat37440707', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:13%; top: 77%;")   
   |
   |
   // image
-  +bckImg('https://www.lechateau.com/style/editorial.jsp?content=lifestyled', 
-		  'Fixez un rendez-vous de stylisme personnel', 
-		  "Voici Votre mode de vie stylée Service de stylisme personnel. Fixez un rendez-vous en magasin avec nos stylistes LE CHÂTEAU.  - Expérience personnalisée  - Jusqu'à 60 minutes de service de stylisme et de conseils mode  - Tenues créées en fonction de votre style personnel ou de l'événement à venir - Salle d'essayage réservée  + recevez un cadeau spécial  *Quantités limitées. En savoir plus>", 
-		  'styling-service-banner-190920-fr-d', 
-		  'styling-service-banner-190920-fr-m')
+  +bckImg('https://www.lechateau.com/style/jump/Cocktail+%26+Party/category/cat37440707', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-d_05',
+		  'lp-flash-191126-fr-m_06',
+      false)
   |
   |
 |
 |
-// END - ROW APPOINTMENT
+// END
 |
-|
-|
-|
+//- END - ROW
 //-END--------------------
 
 //-START ----------------------
-// ROW - OUTLET BOTTOM
-.row.LP-DESKTOP
+// ROW
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('MODE SORTIE EN SOIRÉE', 
+		 'https://www.lechateau.com/style/jump/Night+Out/category/cat44980706', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:57%; top: 67%;")   
   |
   |
   // image
-  +bckImg('https://www.lechateau.com/style/jump/SALE/category/cat260028', 
-		  'Magasinez les soldes', 
-		  'Magasinez les soldes', 
-		  'salebanner-home-190906-fr-d', 
-		  '')
+  +bckImg('https://www.lechateau.com/style/jump/Night+Out/category/cat44980706', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-d_07',
+		  'lp-flash-191126-fr-m_08')
   |
-  // image-map
-  .image-map
-    +map('https://www.lechateau.com/style/jump/SALE/category/cat260028', 'Magasinez les soldes')(style="top:0; left: 0; width: 33.33%; height:100%; position:absolute;")
-    +map('https://www.lechateau.com/style/jump/OUTLET/category/cat37310715', "Magasinez les soldes de l'entrepôt")(style="top:0; left: 33.33%; width: 33.33%; height:100%; position:absolute;")
-    +map('https://www.lechateau.com/style/jump/CLEARANCE/category/cat45930750', 'Magasinez les soldes de liquidation')(style="top:0; left: 66.66%; width: 33.33%; height:100%; position:absolute;")
-    |
-    |
   |
 |
 |
-// END - ROW
+// END
 |
-|
-|
-|
+//- END - ROW
 //-END--------------------
 
-+legal("*Styles sélectionnés.")
+
+//-START ----------------------
+// ROW
+.row
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Pumps/category/cat38210822', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-d_09',
+		  'lp-flash-191126-fr-m_10')
+  |
+  |
+  .image-map.LP-DESKTOP
+     +map('https://www.lechateau.com/style/jump/Pumps/category/cat38210822', "Magasinez les soldes de l'entrepôt")(style="height:100%; top:0; left:0; position:absolute; width:65%;")
+     +map('https://www.lechateau.com/style/jump/Pumps/category/cat38210822', "Magasinez les soldes de l'entrepôt")(style="height:25%; top:0; left:65%; position:absolute; width:35%;")
+     +map('https://www.lechateau.com/style/jump/Sandals/category/cat39970707', "Magasinez les soldes de l'entrepôt")(style="height:25%; top:25%; left:65%; position:absolute; width:35%;")
+     +map('https://www.lechateau.com/style/jump/Handbags/category/cat38150811', "Magasinez les soldes de l'entrepôt")(style="height:25%; top:50%; left:65%; position:absolute; width:35%;")
+     +map('https://www.lechateau.com/style/jump/Night+Out/category/cat46930703', "Magasinez les soldes de l'entrepôt")(style="height:25%; top:75%; left:65%; position:absolute; width:35%;")
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+// ROW
+.row.LP-DEVICE.margin-00
+  // ctas
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Sandals/category/cat39970707', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-m_11',
+		  'lp-flash-191126-fr-m_11')
+  |
+  |
+|
+|
+// END
+|
+|
+
+// ROW
+.row.LP-DEVICE.margin-00
+  // ctas
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Handbags/category/cat38150811', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-m_12',
+		  'lp-flash-191126-fr-m_12')
+  |
+  |
+|
+|
+// END
+|
+|
+
+// ROW
+.row.LP-DEVICE.margin-00
+  // ctas
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Night+Out/category/cat46930703', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-m_13',
+		  'lp-flash-191126-fr-m_13')
+  |
+  |
+|
+|
+// END
+|
+|
+
+//-START ----------------------
+// ROW
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('ROBES DE SOIRÉE', 
+		 'https://www.lechateau.com/style/jump/Evening+%26+Formal/category/cat44980705', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:60%; top: 70%;")           
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Evening+%26+Formal/category/cat44980705', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-d_11',
+		  'lp-flash-191126-fr-m_15')
+  |
+  |
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW
+.row.margin-0
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('MINIROBES', 
+		 'https://www.lechateau.com/style/jump/Mini/category/cat46700702', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:18%; top: 84%;")   
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Mini/category/cat46700702', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-d_12',
+		  'lp-flash-191126-fr-m_17')
+  |
+  |
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW
+.row
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('CARDIGANS', 
+		 'https://www.lechateau.com/style/jump/Dressy+Cover+Ups/category/cat44920703', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:66%; bottom: 0%;")
+    +cta('2 POUR 15 $', 
+		 'https://www.lechateau.com/style/jump/Accessories%3A+2+for+%2415/category/cat46670724', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:20%; bottom: 0%;")           
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Dressy+Cover+Ups/category/cat44920703', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-d_14',
+		  'lp-flash-191126-fr-m_19')
+  |
+  |
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+
+
+//-START ----------------------
+// ROW
+.row.margin-00
+  // ctas
+  .ctas.LP-DESKTOP
+    +cta('3 POUR 10 $', 
+		 'https://www.lechateau.com/style/jump/Accessories%3A+3+for+%2410+/category/cat46730705', 
+		 "Magasinez les soldes de l'entrepôt")(class="btn-lc regular margin-00", style="left:20%; bottom: 0%;")          
+  |
+  |
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Accessories%3A+2+for+%2415/category/cat46670724', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191125-en-d_15',
+		  'lp-flash-191126-fr-m_20')
+  |
+  |
+|
+|
+// END
+|
+//- END - ROW
+//-END--------------------
+
+
+// ROW
+.row.LP-DEVICE.margin-00
+  // ctas
+  // image
+  +bckImg('https://www.lechateau.com/style/jump/Night+Out/category/cat46930703', 
+		  "Magasinez les soldes de l'entrepôt",
+		  "Magasinez les soldes de l'entrepôt",
+		  'lp-flash-191126-fr-m_21',
+		  'lp-flash-191126-fr-m_21')
+  |
+  |
+|
+|
+// END
+|
+|
+
++legal("*Styles sélectionnés, prix tels qu'indiqués.")
